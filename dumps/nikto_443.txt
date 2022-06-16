@@ -1,0 +1,27 @@
+- Nikto v2.1.6/2.1.5
++ Target Host: 10.64.1.105
++ Target Port: 443
++ GET The anti-clickjacking X-Frame-Options header is not present.
++ GET The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ GET The site uses SSL and the Strict-Transport-Security HTTP header is not defined.
++ GET The site uses SSL and Expect-CT header is not present.
++ GET The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ HEAD Apache/2.2.22 appears to be outdated (current is at least Apache/2.4.37). Apache 2.2.34 is the EOL for the 2.x branch.
++ GET The Content-Encoding header is set to "deflate" this may mean that the server is vulnerable to the BREACH attack.
++ GET Hostname '10.64.1.105' does not match certificate's names: BornToSec
++ OPTIONS Allowed HTTP Methods: GET, HEAD, POST, OPTIONS 
++ GET Retrieved x-powered-by header: PHP/5.3.10-1ubuntu3.20
++ GET Cookie PHPSESSID created without the secure flag
++ GET Cookie PHPSESSID created without the httponly flag
++ GET Cookie mlf2_usersettings created without the secure flag
++ GET Cookie mlf2_usersettings created without the httponly flag
++ GET Cookie mlf2_last_visit created without the secure flag
++ GET Cookie mlf2_last_visit created without the httponly flag
++ OSVDB-3092: GET /forum/: This might be interesting...
++ GET Cookie SQMSESSID created without the secure flag
++ GET Cookie SQMSESSID created without the httponly flag
++ OSVDB-3093: GET /webmail/src/read_body.php: SquirrelMail found
++ GET Server may leak inodes via ETags, header found with file /icons/README, inode: 47542, size: 5108, mtime: Tue Aug 28 12:48:10 2007
++ OSVDB-3233: GET /icons/README: Apache default file found.
++ GET /phpmyadmin/: phpMyAdmin directory found
++ OSVDB-3092: GET /phpmyadmin/Documentation.html: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.
