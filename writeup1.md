@@ -139,3 +139,5 @@ If there is a user named `ft_root` it must be an high administrator and we hav h
 Now let's try something a little more funny with the squirelMail's RCE vulnerability.
 
 <!-- TODO Try to add the RCE script to metasploit then run it and start to explore inside the machine -->
+
+<!-- Reset the admin password on the forum? -->
