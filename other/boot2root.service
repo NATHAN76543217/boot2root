@@ -1,0 +1,10 @@
+[Unit]
+Description=Init machine for the Boot2root project.
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /home/kali/shared/scripts/kali_init.sh
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,2510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Fri Jun 17 04:55:54 2022 as: nmap -p- -A -T 4 -sV -O -oN shared/dumps/nmap_scan_norm -oX shared/dumps/nmap_scan_xml -&#45;script=all 10.19.1.251 -->
+<nmaprun scanner="nmap" args="nmap -p- -A -T 4 -sV -O -oN shared/dumps/nmap_scan_norm -oX shared/dumps/nmap_scan_xml -&#45;script=all 10.19.1.251" start="1655434554" startstr="Fri Jun 17 04:55:54 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<prescript><script id="targets-ipv6-multicast-mld" output="&#xa;  IP: fe80::183c:aea2:ff92:996f  MAC: 98:9e:63:26:a2:dc  IFACE: eth0&#xa;  IP: fe80::1c0b:a020:4cc9:8668  MAC: 98:9e:63:29:00:80  IFACE: eth0&#xa;  IP: fe80::1cb9:aa72:724c:1888  MAC: 98:9e:63:25:aa:6a  IFACE: eth0&#xa;  IP: fe80::437:7814:607e:f57e   MAC: 98:9e:63:29:af:ae  IFACE: eth0&#xa;  IP: fe80::4db:9375:873d:4004   MAC: 98:9e:63:40:4d:18  IFACE: eth0&#xa;  IP: fe80::a00:27ff:fec7:5011   MAC: 08:00:27:c7:50:11  IFACE: eth0&#xa;&#xa;  Use -&#45;script-args=newtargets to add the results as targets"><table>
+<elem key="address">fe80::183c:aea2:ff92:996f</elem>
+<elem key="mac">98:9e:63:26:a2:dc</elem>
+<elem key="iface">eth0</elem>
+</table>
+<table>
+<elem key="address">fe80::1c0b:a020:4cc9:8668</elem>
+<elem key="mac">98:9e:63:29:00:80</elem>
+<elem key="iface">eth0</elem>
+</table>
+<table>
+<elem key="address">fe80::1cb9:aa72:724c:1888</elem>
+<elem key="mac">98:9e:63:25:aa:6a</elem>
+<elem key="iface">eth0</elem>
+</table>
+<table>
+<elem key="address">fe80::437:7814:607e:f57e</elem>
+<elem key="mac">98:9e:63:29:af:ae</elem>
+<elem key="iface">eth0</elem>
+</table>
+<table>
+<elem key="address">fe80::4db:9375:873d:4004</elem>
+<elem key="mac">98:9e:63:40:4d:18</elem>
+<elem key="iface">eth0</elem>
+</table>
+<table>
+<elem key="address">fe80::a00:27ff:fec7:5011</elem>
+<elem key="mac">08:00:27:c7:50:11</elem>
+<elem key="iface">eth0</elem>
+</table>
+</script><script id="eap-info" output="please specify an interface with -e"/><script id="http-robtex-shared-ns" output="*TEMPORARILY DISABLED* due to changes in Robtex&apos;s API. See https://www.robtex.com/api/"/><script id="broadcast-dns-service-discovery" output="&#xa;  224.0.0.251&#xa;    9/tcp workstation&#xa;      Address=10.19.1.66 fe80::108c:6019:aabc:1b06&#xa;    9/tcp workstation&#xa;      Address=10.19.1.23 fe80::1c83:9caf:737f:137&#xa;    9/tcp workstation&#xa;      Address=10.19.1.214 fe80::1c18:cd3:3c9c:5d1f&#xa;    9/tcp workstation&#xa;      Address=10.19.1.123 fe80::18ca:ffd4:34f9:b140&#xa;    9/tcp workstation&#xa;      Address=10.19.1.103 fe80::883:5e0d:9ac4:3564&#xa;    9/tcp workstation&#xa;      Address=10.19.1.238 fe80::437:fa85:a35c:9be4&#xa;    9/tcp workstation&#xa;      Address=10.19.1.18 fe80::437:7814:607e:f57e&#xa;    9/tcp workstation&#xa;      Address=10.19.1.33 fe80::1c6b:95d9:543:b1a&#xa;    9/tcp workstation&#xa;      Address=10.19.1.100 fe80::4db:9375:873d:4004&#xa;    9/tcp workstation&#xa;      Address=10.19.1.245 fe80::183c:aea2:ff92:996f&#xa;    9/tcp workstation&#xa;      Address=10.19.1.80 fe80::cf5:1c4a:5587:204d&#xa;    9/tcp workstation&#xa;      Address=10.19.1.48 fe80::1c71:b594:6abd:5a8c&#xa;    9/tcp workstation&#xa;      Address=10.19.1.42 fe80::1ce2:1e58:2038:cb1e&#xa;    9/tcp workstation&#xa;      Address=10.19.1.130 fe80::cfb:9d3b:73a6:1530&#xa;    9/tcp workstation&#xa;      Address=10.19.1.44 fe80::1c0b:a020:4cc9:8668&#xa;    9/tcp workstation&#xa;      Address=10.19.1.65 fe80::cc:68ea:c0a6:8116&#xa;    9/tcp workstation&#xa;      Address=10.19.1.209 fe80::82b:e26:b7a7:e2e7&#xa;    9/tcp workstation&#xa;      Address=10.19.1.109 fe80::453:e66d:b215:48fa&#xa;    9/tcp workstation&#xa;      Address=10.19.1.162 fe80::ca0:29b2:2a29:4167&#xa;    9/tcp workstation&#xa;      Address=10.19.1.93 fe80::86b:fd18:1871:9c6a&#xa;    9/tcp workstation&#xa;      Address=10.19.1.200 fe80::474:575e:248d:8fb0&#xa;    9/tcp workstation&#xa;      Address=10.19.1.191 fe80::1cb9:aa72:724c:1888&#xa;    9/tcp workstation&#xa;      Address=10.19.1.142 fe80::1cf0:10fc:ae15:1188&#xa;    22/tcp sftp-ssh&#xa;      Address=10.19.1.66 fe80::108c:6019:aabc:1b06&#xa;    22/tcp sftp-ssh&#xa;      Address=10.19.1.42 fe80::1ce2:1e58:2038:cb1e&#xa;    22/tcp sftp-ssh&#xa;      Address=10.19.1.162 fe80::ca0:29b2:2a29:4167&#xa;    22/tcp sftp-ssh&#xa;      Address=10.19.1.103 fe80::883:5e0d:9ac4:3564&#xa;    22/tcp sftp-ssh&#xa;      Address=10.19.1.200 fe80::474:575e:248d:8fb0&#xa;    22/tcp sftp-ssh&#xa;      Address=10.19.1.123 fe80::18ca:ffd4:34f9:b140&#xa;    22/tcp sftp-ssh&#xa;      Address=10.19.1.245 fe80::183c:aea2:ff92:996f&#xa;    22/tcp sftp-ssh&#xa;      Address=10.19.1.65 fe80::cc:68ea:c0a6:8116&#xa;    22/tcp sftp-ssh&#xa;      Address=10.19.1.33 fe80::1c6b:95d9:543:b1a&#xa;    22/tcp sftp-ssh&#xa;      Address=10.19.1.44 fe80::1c0b:a020:4cc9:8668&#xa;    22/tcp sftp-ssh&#xa;      Address=10.19.1.18 fe80::437:7814:607e:f57e&#xa;    22/tcp sftp-ssh&#xa;      Address=10.19.1.209 fe80::82b:e26:b7a7:e2e7&#xa;    22/tcp sftp-ssh&#xa;      Address=10.19.1.80 fe80::cf5:1c4a:5587:204d&#xa;    22/tcp sftp-ssh&#xa;      Address=10.19.1.214 fe80::1c18:cd3:3c9c:5d1f&#xa;    22/tcp sftp-ssh&#xa;      Address=10.19.1.130 fe80::cfb:9d3b:73a6:1530&#xa;    22/tcp sftp-ssh&#xa;      Address=10.19.1.191 fe80::1cb9:aa72:724c:1888&#xa;    22/tcp sftp-ssh&#xa;      Address=10.19.1.48 fe80::1c71:b594:6abd:5a8c&#xa;    22/tcp sftp-ssh&#xa;      Address=10.19.1.142 fe80::1cf0:10fc:ae15:1188&#xa;    22/tcp sftp-ssh&#xa;      Address=10.19.1.23 fe80::1c83:9caf:737f:137&#xa;    22/tcp sftp-ssh&#xa;      Address=10.19.1.238 fe80::437:fa85:a35c:9be4&#xa;    22/tcp sftp-ssh&#xa;      Address=10.19.1.93 fe80::86b:fd18:1871:9c6a&#xa;    22/tcp sftp-ssh&#xa;      Address=10.19.1.100 fe80::4db:9375:873d:4004&#xa;    22/tcp sftp-ssh&#xa;      Address=10.19.1.109 fe80::453:e66d:b215:48fa&#xa;    22/tcp ssh&#xa;      Address=10.19.1.103 fe80::883:5e0d:9ac4:3564&#xa;    22/tcp ssh&#xa;      Address=10.19.1.23 fe80::1c83:9caf:737f:137&#xa;    22/tcp ssh&#xa;      Address=10.19.1.33 fe80::1c6b:95d9:543:b1a&#xa;    22/tcp ssh&#xa;      Address=10.19.1.48 fe80::1c71:b594:6abd:5a8c&#xa;    22/tcp ssh&#xa;      Address=10.19.1.162 fe80::ca0:29b2:2a29:4167&#xa;    22/tcp ssh&#xa;      Address=10.19.1.238 fe80::437:fa85:a35c:9be4&#xa;    22/tcp ssh&#xa;      Address=10.19.1.44 fe80::1c0b:a020:4cc9:8668&#xa;    22/tcp ssh&#xa;      Address=10.19.1.100 fe80::4db:9375:873d:4004&#xa;    22/tcp ssh&#xa;      Address=10.19.1.191 fe80::1cb9:aa72:724c:1888&#xa;    22/tcp ssh&#xa;      Address=10.19.1.245 fe80::183c:aea2:ff92:996f&#xa;    22/tcp ssh&#xa;      Address=10.19.1.65 fe80::cc:68ea:c0a6:8116&#xa;    22/tcp ssh&#xa;      Address=10.19.1.18 fe80::437:7814:607e:f57e&#xa;    22/tcp ssh&#xa;      Address=10.19.1.93 fe80::86b:fd18:1871:9c6a&#xa;    22/tcp ssh&#xa;      Address=10.19.1.142 fe80::1cf0:10fc:ae15:1188&#xa;    22/tcp ssh&#xa;      Address=10.19.1.109 fe80::453:e66d:b215:48fa&#xa;    22/tcp ssh&#xa;      Address=10.19.1.42 fe80::1ce2:1e58:2038:cb1e&#xa;    22/tcp ssh&#xa;      Address=10.19.1.214 fe80::1c18:cd3:3c9c:5d1f&#xa;    22/tcp ssh&#xa;      Address=10.19.1.80 fe80::cf5:1c4a:5587:204d&#xa;    22/tcp ssh&#xa;      Address=10.19.1.123 fe80::18ca:ffd4:34f9:b140&#xa;    22/tcp ssh&#xa;      Address=10.19.1.200 fe80::474:575e:248d:8fb0&#xa;    22/tcp ssh&#xa;      Address=10.19.1.130 fe80::cfb:9d3b:73a6:1530&#xa;    22/tcp ssh&#xa;      Address=10.19.1.209 fe80::82b:e26:b7a7:e2e7&#xa;    22/tcp ssh&#xa;      Address=10.19.1.66 fe80::108c:6019:aabc:1b06&#xa;    3283/udp net-assistant&#xa;      Address=10.19.1.18 fe80::437:7814:607e:f57e&#xa;    3283/udp net-assistant&#xa;      Address=10.19.1.162 fe80::ca0:29b2:2a29:4167&#xa;    3283/udp net-assistant&#xa;      Address=10.19.1.123 fe80::18ca:ffd4:34f9:b140&#xa;    3283/udp net-assistant&#xa;      Address=10.19.1.66 fe80::108c:6019:aabc:1b06&#xa;    3283/udp net-assistant&#xa;      Address=10.19.1.200 fe80::474:575e:248d:8fb0&#xa;    3283/udp net-assistant&#xa;      Address=10.19.1.245 fe80::183c:aea2:ff92:996f&#xa;    3283/udp net-assistant&#xa;      Address=10.19.1.109 fe80::453:e66d:b215:48fa&#xa;    3283/udp net-assistant&#xa;      Address=10.19.1.209 fe80::82b:e26:b7a7:e2e7&#xa;    3283/udp net-assistant&#xa;      Address=10.19.1.214 fe80::1c18:cd3:3c9c:5d1f&#xa;    3283/udp net-assistant&#xa;      Address=10.19.1.130 fe80::cfb:9d3b:73a6:1530&#xa;    3283/udp net-assistant&#xa;      Address=10.19.1.100 fe80::4db:9375:873d:4004&#xa;    3283/udp net-assistant&#xa;      Address=10.19.1.191 fe80::1cb9:aa72:724c:1888&#xa;    3283/udp net-assistant&#xa;      Address=10.19.1.80 fe80::cf5:1c4a:5587:204d&#xa;    3283/udp net-assistant&#xa;      Address=10.19.1.142 fe80::1cf0:10fc:ae15:1188&#xa;    3283/udp net-assistant&#xa;      Address=10.19.1.23 fe80::1c83:9caf:737f:137&#xa;    3283/udp net-assistant&#xa;      Address=10.19.1.238 fe80::437:fa85:a35c:9be4&#xa;    3283/udp net-assistant&#xa;      Address=10.19.1.33 fe80::1c6b:95d9:543:b1a&#xa;    3283/udp net-assistant&#xa;      Address=10.19.1.44 fe80::1c0b:a020:4cc9:8668&#xa;    3283/udp net-assistant&#xa;      Address=10.19.1.103 fe80::883:5e0d:9ac4:3564&#xa;    5900/tcp rfb&#xa;      Address=10.19.1.209 fe80::82b:e26:b7a7:e2e7&#xa;    5900/tcp rfb&#xa;      Address=10.19.1.200 fe80::474:575e:248d:8fb0&#xa;    5900/tcp rfb&#xa;      Address=10.19.1.245 fe80::183c:aea2:ff92:996f&#xa;    5900/tcp rfb&#xa;      Address=10.19.1.238 fe80::437:fa85:a35c:9be4&#xa;    5900/tcp rfb&#xa;      Address=10.19.1.130 fe80::cfb:9d3b:73a6:1530&#xa;    5900/tcp rfb&#xa;      Address=10.19.1.142 fe80::1cf0:10fc:ae15:1188&#xa;    5900/tcp rfb&#xa;      Address=10.19.1.44 fe80::1c0b:a020:4cc9:8668&#xa;    5900/tcp rfb&#xa;      Address=10.19.1.123 fe80::18ca:ffd4:34f9:b140&#xa;    5900/tcp rfb&#xa;      Address=10.19.1.191 fe80::1cb9:aa72:724c:1888&#xa;    5900/tcp rfb&#xa;      Address=10.19.1.33 fe80::1c6b:95d9:543:b1a&#xa;    5900/tcp rfb&#xa;      Address=10.19.1.80 fe80::cf5:1c4a:5587:204d&#xa;    5900/tcp rfb&#xa;      Address=10.19.1.103 fe80::883:5e0d:9ac4:3564&#xa;    5900/tcp rfb&#xa;      Address=10.19.1.100 fe80::4db:9375:873d:4004&#xa;    5900/tcp rfb&#xa;      Address=10.19.1.18 fe80::437:7814:607e:f57e&#xa;    5900/tcp rfb&#xa;      Address=10.19.1.23 fe80::1c83:9caf:737f:137&#xa;    5900/tcp rfb&#xa;      Address=10.19.1.214 fe80::1c18:cd3:3c9c:5d1f&#xa;    5900/tcp rfb&#xa;      Address=10.19.1.66 fe80::108c:6019:aabc:1b06&#xa;"/><script id="broadcast-dhcp-discover" output="&#xa;  Response 1 of 1: &#xa;    Interface: eth0&#xa;    IP Offered: 10.19.1.70&#xa;    Server Identifier: 10.51.1.4&#xa;    Subnet Mask: 255.255.255.0&#xa;    Router: 10.19.1.254&#xa;    Domain Name Server: 10.51.1.5&#xa;    Domain Name: 42lyon.fr&#xa;    Broadcast Address: 10.19.1.255"><table key="Response 1 of 1">
+<elem key="Interface">eth0</elem>
+<elem key="IP Offered">10.19.1.70</elem>
+<elem key="Server Identifier">10.51.1.4</elem>
+<elem key="Subnet Mask">255.255.255.0</elem>
+<elem key="Router">10.19.1.254</elem>
+<elem key="Domain Name Server">10.51.1.5</elem>
+<elem key="Domain Name">42lyon.fr</elem>
+<elem key="Broadcast Address">10.19.1.255</elem>
+</table>
+</script><script id="targets-ipv6-multicast-invalid-dst" output="&#xa;  IP: fe80::a00:27ff:fec7:5011   MAC: 08:00:27:c7:50:11  IFACE: eth0&#xa;  IP: fe80::1c0b:a020:4cc9:8668  MAC: 98:9e:63:29:00:80  IFACE: eth0&#xa;  IP: fe80::183c:aea2:ff92:996f  MAC: 98:9e:63:26:a2:dc  IFACE: eth0&#xa;  IP: fe80::437:7814:607e:f57e   MAC: 98:9e:63:29:af:ae  IFACE: eth0&#xa;  IP: fe80::1cb9:aa72:724c:1888  MAC: 98:9e:63:25:aa:6a  IFACE: eth0&#xa;  IP: fe80::4db:9375:873d:4004   MAC: 98:9e:63:40:4d:18  IFACE: eth0&#xa;  IP: fe80::1c83:9caf:737f:137   MAC: 98:9e:63:40:88:6a  IFACE: eth0&#xa;  IP: fe80::1a65:71ff:fef1:2e    MAC: 18:65:71:f1:00:2e  IFACE: eth0&#xa;  IP: fe80::1c6b:95d9:543:b1a    MAC: 98:9e:63:40:4c:ee  IFACE: eth0&#xa;  IP: fe80::437:fa85:a35c:9be4   MAC: 98:9e:63:29:ae:f6  IFACE: eth0&#xa;  IP: fe80::474:575e:248d:8fb0   MAC: 98:9e:63:40:88:5e  IFACE: eth0&#xa;  IP: fe80::1cf0:10fc:ae15:1188  MAC: 98:9e:63:29:0a:fe  IFACE: eth0&#xa;  IP: fe80::1ce2:1e58:2038:cb1e  MAC: 98:9e:63:29:04:d0  IFACE: eth0&#xa;  IP: fe80::453:e66d:b215:48fa   MAC: 98:9e:63:29:02:78  IFACE: eth0&#xa;  IP: fe80::82b:e26:b7a7:e2e7    MAC: 98:9e:63:28:fe:4a  IFACE: eth0&#xa;  IP: fe80::ca0:29b2:2a29:4167   MAC: 98:9e:63:27:b6:f6  IFACE: eth0&#xa;  IP: fe80::1c71:b594:6abd:5a8c  MAC: 98:9e:63:29:04:12  IFACE: eth0&#xa;  IP: fe80::108c:6019:aabc:1b06  MAC: 98:9e:63:40:56:54  IFACE: eth0&#xa;  IP: fe80::18ca:ffd4:34f9:b140  MAC: 98:9e:63:25:aa:30  IFACE: eth0&#xa;  IP: fe80::cf5:1c4a:5587:204d   MAC: 98:9e:63:29:a6:fa  IFACE: eth0&#xa;  IP: fe80::cc:68ea:c0a6:8116    MAC: 98:9e:63:28:fe:62  IFACE: eth0&#xa;  IP: fe80::86b:fd18:1871:9c6a   MAC: 98:9e:63:29:00:6a  IFACE: eth0&#xa;  IP: fe80::1c18:cd3:3c9c:5d1f   MAC: 98:9e:63:40:56:3a  IFACE: eth0&#xa;  IP: fe80::883:5e0d:9ac4:3564   MAC: 98:9e:63:27:b4:5a  IFACE: eth0&#xa;  IP: fe80::62:1d08:508:ccc8     MAC: dc:a6:32:7f:80:32  IFACE: eth0&#xa;  IP: fe80::585a:d6ff:feae:50f3  MAC: 5a:5a:d6:ae:50:f3  IFACE: eth0&#xa;  IP: fe80::cfb:9d3b:73a6:1530   MAC: 98:9e:63:40:4d:68  IFACE: eth0&#xa;  Use -&#45;script-args=newtargets to add the results as targets&#xa;"/><script id="broadcast-avahi-dos" output="&#xa;  Discovered hosts:&#xa;    224.0.0.251&#xa;  After NULL UDP avahi packet DoS (CVE-2011-1002).&#xa;  Hosts are all up (not vulnerable).&#xa;"/><script id="broadcast-ping" output="&#xa;  IP: 10.19.1.123  MAC: 98:9e:63:25:aa:30&#xa;  IP: 10.19.1.18   MAC: 98:9e:63:29:af:ae&#xa;  IP: 10.19.1.191  MAC: 98:9e:63:25:aa:6a&#xa;  IP: 10.19.1.142  MAC: 98:9e:63:29:0a:fe&#xa;  IP: 10.19.1.109  MAC: 98:9e:63:29:02:78&#xa;  IP: 10.19.1.162  MAC: 98:9e:63:27:b6:f6&#xa;  IP: 10.19.1.65   MAC: 98:9e:63:28:fe:62&#xa;  IP: 10.19.1.93   MAC: 98:9e:63:29:00:6a&#xa;  IP: 10.19.1.80   MAC: 98:9e:63:29:a6:fa&#xa;  IP: 10.19.1.48   MAC: 98:9e:63:29:04:12&#xa;  IP: 10.19.1.44   MAC: 98:9e:63:29:00:80&#xa;  IP: 10.19.1.103  MAC: 98:9e:63:27:b4:5a&#xa;  IP: 10.19.1.238  MAC: 98:9e:63:29:ae:f6&#xa;  IP: 10.19.1.100  MAC: 98:9e:63:40:4d:18&#xa;  IP: 10.19.1.66   MAC: 98:9e:63:40:56:54&#xa;  IP: 10.19.1.214  MAC: 98:9e:63:40:56:3a&#xa;  IP: 10.19.1.200  MAC: 98:9e:63:40:88:5e&#xa;  IP: 10.19.1.42   MAC: 98:9e:63:29:04:d0&#xa;  IP: 10.19.1.130  MAC: 98:9e:63:40:4d:68&#xa;  IP: 10.19.1.23   MAC: 98:9e:63:40:88:6a&#xa;  IP: 10.19.1.209  MAC: 98:9e:63:28:fe:4a&#xa;  IP: 10.19.1.245  MAC: 98:9e:63:26:a2:dc&#xa;  IP: 10.19.1.33   MAC: 98:9e:63:40:4c:ee&#xa;  Use -&#45;script-args=newtargets to add the results as targets&#xa;"/><script id="broadcast-listener" output="&#xa;  ether&#xa;      ARP Request&#xa;        sender ip    sender mac         target ip&#xa;        10.19.1.251  08:00:27:c7:50:11  10.19.1.254&#xa;  udp&#xa;      DHCP&#xa;        srv ip       cli ip      mask           gw           dns        vendor&#xa;        10.19.1.254  10.19.1.31  255.255.255.0  10.19.1.254  10.51.1.5  -&#xa;        10.19.1.254  10.19.1.70  255.255.255.0  10.19.1.254  10.51.1.5  -&#xa;      MDNS&#xa;        Generic&#xa;          ip           ipv6                       name&#xa;          10.19.1.103  fe80::883:5e0d:9ac4:3564   z2r1p2._device-info._tcp.local&#xa;          10.19.1.65   fe80::883:5e0d:9ac4:3564   _services._dns-sd._udp.local&#xa;          10.19.1.65   fe80::cc:68ea:c0a6:8116    _ssh._tcp.local&#xa;          10.19.1.162  fe80::cfb:9d3b:73a6:1530   _workstation._tcp.local&#xa;          10.19.1.123  fe80::18ca:ffd4:34f9:b140  z2r10p6._device-info._tcp.local&#xa;          10.19.1.109  fe80::453:e66d:b215:48fa   z2r5p2._device-info._tcp.local&#xa;      Spotify&#xa;        ip&#xa;        10.19.1.241&#xa;      Netbios&#xa;        Query&#xa;          ip           query&#xa;          10.19.1.80   &#xa;          10.19.1.44   &#xa;          10.19.1.123  &#xa;"/><script id="targets-asn" output="&#xa;  targets-asn.asn is a mandatory parameter&#xa;"/><script id="ipv6-multicast-mld-list" output="&#xa;  fe80::a00:27ff:fec7:5011: &#xa;    device: eth0&#xa;    mac: 08:00:27:c7:50:11&#xa;    multicast_ips: &#xa;      ff02::1:ffc7:5011         (NDP Solicited-node)&#xa;  fe80::1c0b:a020:4cc9:8668: &#xa;    device: eth0&#xa;    mac: 98:9e:63:29:00:80&#xa;    multicast_ips: &#xa;      ff02::fb                  (mDNSv6)&#xa;  fe80::4db:9375:873d:4004: &#xa;    device: eth0&#xa;    mac: 98:9e:63:40:4d:18&#xa;    multicast_ips: &#xa;      ff02::fb                  (mDNSv6)&#xa;      ff02::2:ffbe:6bd6         (Node Information Queries)&#xa;      ff02::1:ff3d:4004         (NDP Solicited-node)&#xa;  fe80::1cb9:aa72:724c:1888: &#xa;    device: eth0&#xa;    mac: 98:9e:63:25:aa:6a&#xa;    multicast_ips: &#xa;      ff02::fb                  (mDNSv6)&#xa;      ff02::2:ff6f:46be         (Node Information Queries)&#xa;      ff02::1:ff4c:1888         (NDP Solicited-node)&#xa;  fe80::183c:aea2:ff92:996f: &#xa;    device: eth0&#xa;    mac: 98:9e:63:26:a2:dc&#xa;    multicast_ips: &#xa;      ff02::fb                  (mDNSv6)&#xa;      ff02::2:ffbe:6bd6         (Node Information Queries)&#xa;      ff02::1:ff92:996f         (NDP Solicited-node)&#xa;  fe80::437:7814:607e:f57e: &#xa;    device: eth0&#xa;    mac: 98:9e:63:29:af:ae&#xa;    multicast_ips: &#xa;      ff02::fb                  (mDNSv6)&#xa;      ff02::2:ff6f:46be         (Node Information Queries)&#xa;      ff02::1:ff7e:f57e         (NDP Solicited-node)"><table key="fe80::a00:27ff:fec7:5011">
+<elem key="device">eth0</elem>
+<elem key="mac">08:00:27:c7:50:11</elem>
+<table key="multicast_ips">
+<table>
+<elem key="ip">ff02::1:ffc7:5011</elem>
+<elem key="description">NDP Solicited-node</elem>
+</table>
+</table>
+</table>
+<table key="fe80::1c0b:a020:4cc9:8668">
+<elem key="device">eth0</elem>
+<elem key="mac">98:9e:63:29:00:80</elem>
+<table key="multicast_ips">
+<table>
+<elem key="ip">ff02::fb</elem>
+<elem key="description">mDNSv6</elem>
+</table>
+</table>
+</table>
+<table key="fe80::4db:9375:873d:4004">
+<elem key="device">eth0</elem>
+<elem key="mac">98:9e:63:40:4d:18</elem>
+<table key="multicast_ips">
+<table>
+<elem key="ip">ff02::fb</elem>
+<elem key="description">mDNSv6</elem>
+</table>
+<table>
+<elem key="ip">ff02::2:ffbe:6bd6</elem>
+<elem key="description">Node Information Queries</elem>
+</table>
+<table>
+<elem key="ip">ff02::1:ff3d:4004</elem>
+<elem key="description">NDP Solicited-node</elem>
+</table>
+</table>
+</table>
+<table key="fe80::1cb9:aa72:724c:1888">
+<elem key="device">eth0</elem>
+<elem key="mac">98:9e:63:25:aa:6a</elem>
+<table key="multicast_ips">
+<table>
+<elem key="ip">ff02::fb</elem>
+<elem key="description">mDNSv6</elem>
+</table>
+<table>
+<elem key="ip">ff02::2:ff6f:46be</elem>
+<elem key="description">Node Information Queries</elem>
+</table>
+<table>
+<elem key="ip">ff02::1:ff4c:1888</elem>
+<elem key="description">NDP Solicited-node</elem>
+</table>
+</table>
+</table>
+<table key="fe80::183c:aea2:ff92:996f">
+<elem key="device">eth0</elem>
+<elem key="mac">98:9e:63:26:a2:dc</elem>
+<table key="multicast_ips">
+<table>
+<elem key="ip">ff02::fb</elem>
+<elem key="description">mDNSv6</elem>
+</table>
+<table>
+<elem key="ip">ff02::2:ffbe:6bd6</elem>
+<elem key="description">Node Information Queries</elem>
+</table>
+<table>
+<elem key="ip">ff02::1:ff92:996f</elem>
+<elem key="description">NDP Solicited-node</elem>
+</table>
+</table>
+</table>
+<table key="fe80::437:7814:607e:f57e">
+<elem key="device">eth0</elem>
+<elem key="mac">98:9e:63:29:af:ae</elem>
+<table key="multicast_ips">
+<table>
+<elem key="ip">ff02::fb</elem>
+<elem key="description">mDNSv6</elem>
+</table>
+<table>
+<elem key="ip">ff02::2:ff6f:46be</elem>
+<elem key="description">Node Information Queries</elem>
+</table>
+<table>
+<elem key="ip">ff02::1:ff7e:f57e</elem>
+<elem key="description">NDP Solicited-node</elem>
+</table>
+</table>
+</table>
+</script><script id="targets-ipv6-multicast-echo" output="&#xa;  IP: fe80::a00:27ff:fec7:5011   MAC: 08:00:27:c7:50:11  IFACE: eth0&#xa;  IP: fe80::1c0b:a020:4cc9:8668  MAC: 98:9e:63:29:00:80  IFACE: eth0&#xa;  IP: fe80::1cb9:aa72:724c:1888  MAC: 98:9e:63:25:aa:6a  IFACE: eth0&#xa;  IP: fe80::4db:9375:873d:4004   MAC: 98:9e:63:40:4d:18  IFACE: eth0&#xa;  IP: fe80::183c:aea2:ff92:996f  MAC: 98:9e:63:26:a2:dc  IFACE: eth0&#xa;  IP: fe80::437:7814:607e:f57e   MAC: 98:9e:63:29:af:ae  IFACE: eth0&#xa;  IP: fe80::1cf0:10fc:ae15:1188  MAC: 98:9e:63:29:0a:fe  IFACE: eth0&#xa;  IP: fe80::474:575e:248d:8fb0   MAC: 98:9e:63:40:88:5e  IFACE: eth0&#xa;  IP: fe80::1ce2:1e58:2038:cb1e  MAC: 98:9e:63:29:04:d0  IFACE: eth0&#xa;  IP: fe80::82b:e26:b7a7:e2e7    MAC: 98:9e:63:28:fe:4a  IFACE: eth0&#xa;  IP: fe80::ca0:29b2:2a29:4167   MAC: 98:9e:63:27:b6:f6  IFACE: eth0&#xa;  IP: fe80::453:e66d:b215:48fa   MAC: 98:9e:63:29:02:78  IFACE: eth0&#xa;  IP: fe80::437:fa85:a35c:9be4   MAC: 98:9e:63:29:ae:f6  IFACE: eth0&#xa;  IP: fe80::1c83:9caf:737f:137   MAC: 98:9e:63:40:88:6a  IFACE: eth0&#xa;  IP: fe80::883:5e0d:9ac4:3564   MAC: 98:9e:63:27:b4:5a  IFACE: eth0&#xa;  IP: fe80::1c6b:95d9:543:b1a    MAC: 98:9e:63:40:4c:ee  IFACE: eth0&#xa;  IP: fe80::cf5:1c4a:5587:204d   MAC: 98:9e:63:29:a6:fa  IFACE: eth0&#xa;  IP: fe80::1c71:b594:6abd:5a8c  MAC: 98:9e:63:29:04:12  IFACE: eth0&#xa;  IP: fe80::108c:6019:aabc:1b06  MAC: 98:9e:63:40:56:54  IFACE: eth0&#xa;  IP: fe80::86b:fd18:1871:9c6a   MAC: 98:9e:63:29:00:6a  IFACE: eth0&#xa;  IP: fe80::18ca:ffd4:34f9:b140  MAC: 98:9e:63:25:aa:30  IFACE: eth0&#xa;  IP: fe80::1c18:cd3:3c9c:5d1f   MAC: 98:9e:63:40:56:3a  IFACE: eth0&#xa;  IP: fe80::cc:68ea:c0a6:8116    MAC: 98:9e:63:28:fe:62  IFACE: eth0&#xa;  IP: fe80::62:1d08:508:ccc8     MAC: dc:a6:32:7f:80:32  IFACE: eth0&#xa;  IP: fe80::585a:d6ff:feae:50f3  MAC: 5a:5a:d6:ae:50:f3  IFACE: eth0&#xa;  Use -&#45;script-args=newtargets to add the results as targets&#xa;"/><script id="hostmap-robtex" output="*TEMPORARILY DISABLED* due to changes in Robtex&apos;s API. See https://www.robtex.com/api/"/></prescript><hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.19.1.251" addrtype="ipv4"/>
+<address addr="08:00:27:C7:50:11" addrtype="mac" vendor="Oracle VirtualBox virtual NIC"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1655434600" endtime="1655438489"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.19.1.251" addrtype="ipv4"/>
+<address addr="08:00:27:C7:50:11" addrtype="mac" vendor="Oracle VirtualBox virtual NIC"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65529">
+<extrareasons reason="reset" count="65529" proto="tcp" ports="1-20,23-79,81-142,144-442,444-992,994-65535"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ftp" product="vsftpd" version="2.0.8 or later" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd</cpe></service><script id="ftp-anon" output="got code 500 &quot;OOPS: vsftpd: refusing to run with writable root inside chroot()&quot;."/><script id="banner" output="220 Welcome on this server"/><script id="ftp-brute" output="&#xa;  Accounts: No valid accounts found&#xa;  Statistics: Performed 0 guesses in 1 seconds, average tps: 0.0&#xa;  ERROR: The service seems to have failed or is heavily firewalled..."><elem key="Accounts">No valid accounts found</elem>
+<elem key="Statistics">Performed 0 guesses in 1 seconds, average tps: 0.0</elem>
+<elem key="ERROR">The service seems to have failed or is heavily firewalled...</elem>
+</script></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="5.9p1 Debian 5ubuntu1.7" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:5.9p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-run" output="Failed to specify credentials and command to run."/><script id="ssh-auth-methods" output="&#xa;  Supported authentication methods: &#xa;    publickey&#xa;    password"><table key="Supported authentication methods">
+<elem>publickey</elem>
+<elem>password</elem>
+</table>
+</script><script id="vulners" output="&#xa;  cpe:/a:openbsd:openssh:5.9p1: &#xa;    &#x9;SSV:60656&#x9;5.0&#x9;https://vulners.com/seebug/SSV:60656&#x9;*EXPLOIT*&#xa;    &#x9;CVE-2018-15919&#x9;5.0&#x9;https://vulners.com/cve/CVE-2018-15919&#xa;    &#x9;CVE-2017-15906&#x9;5.0&#x9;https://vulners.com/cve/CVE-2017-15906&#xa;    &#x9;CVE-2010-5107&#x9;5.0&#x9;https://vulners.com/cve/CVE-2010-5107&#xa;    &#x9;SSV:90447&#x9;4.6&#x9;https://vulners.com/seebug/SSV:90447&#x9;*EXPLOIT*&#xa;    &#x9;CVE-2016-0778&#x9;4.6&#x9;https://vulners.com/cve/CVE-2016-0778&#xa;    &#x9;MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/&#x9;4.3&#x9;https://vulners.com/metasploit/MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/&#x9;4.3&#x9;https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/&#x9;4.3&#x9;https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/&#x9;4.3&#x9;https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/&#x9;4.3&#x9;https://vulners.com/metasploit/MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/&#x9;*EXPLOIT*&#xa;    &#x9;CVE-2020-14145&#x9;4.3&#x9;https://vulners.com/cve/CVE-2020-14145&#xa;    &#x9;MSF:ILITIES/UBUNTU-CVE-2016-0777/&#x9;4.0&#x9;https://vulners.com/metasploit/MSF:ILITIES/UBUNTU-CVE-2016-0777/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/IBM-AIX-CVE-2016-0777/&#x9;4.0&#x9;https://vulners.com/metasploit/MSF:ILITIES/IBM-AIX-CVE-2016-0777/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/DEBIAN-CVE-2016-0777/&#x9;4.0&#x9;https://vulners.com/metasploit/MSF:ILITIES/DEBIAN-CVE-2016-0777/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/AIX-7.2-OPENSSH_ADVISORY7_CVE-2016-0777/&#x9;4.0&#x9;https://vulners.com/metasploit/MSF:ILITIES/AIX-7.2-OPENSSH_ADVISORY7_CVE-2016-0777/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/AIX-7.1-OPENSSH_ADVISORY7_CVE-2016-0777/&#x9;4.0&#x9;https://vulners.com/metasploit/MSF:ILITIES/AIX-7.1-OPENSSH_ADVISORY7_CVE-2016-0777/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/AIX-5.3-OPENSSH_ADVISORY7_CVE-2016-0777/&#x9;4.0&#x9;https://vulners.com/metasploit/MSF:ILITIES/AIX-5.3-OPENSSH_ADVISORY7_CVE-2016-0777/&#x9;*EXPLOIT*&#xa;    &#x9;CVE-2016-0777&#x9;4.0&#x9;https://vulners.com/cve/CVE-2016-0777"><table key="cpe:/a:openbsd:openssh:5.9p1">
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="id">SSV:60656</elem>
+<elem key="type">seebug</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="id">CVE-2018-15919</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="id">CVE-2017-15906</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="id">CVE-2010-5107</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">4.6</elem>
+<elem key="id">SSV:90447</elem>
+<elem key="type">seebug</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.6</elem>
+<elem key="id">CVE-2016-0778</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">CVE-2020-14145</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">4.0</elem>
+<elem key="id">MSF:ILITIES/UBUNTU-CVE-2016-0777/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.0</elem>
+<elem key="id">MSF:ILITIES/IBM-AIX-CVE-2016-0777/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.0</elem>
+<elem key="id">MSF:ILITIES/DEBIAN-CVE-2016-0777/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.0</elem>
+<elem key="id">MSF:ILITIES/AIX-7.2-OPENSSH_ADVISORY7_CVE-2016-0777/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.0</elem>
+<elem key="id">MSF:ILITIES/AIX-7.1-OPENSSH_ADVISORY7_CVE-2016-0777/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.0</elem>
+<elem key="id">MSF:ILITIES/AIX-5.3-OPENSSH_ADVISORY7_CVE-2016-0777/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.0</elem>
+<elem key="id">CVE-2016-0777</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+</table>
+</script><script id="ssh-hostkey" output="&#xa;  1024 07:bf:02:20:f0:8a:c8:48:1e:fc:41:ae:a4:46:fa:25 (DSA)&#xa;  2048 26:dd:80:a3:df:c4:4b:53:1e:53:42:46:ef:6e:30:b2 (RSA)&#xa;  256 cf:c3:8c:31:d7:47:7c:84:e2:d2:16:31:b2:8e:63:a7 (ECDSA)"><table>
+<elem key="key">AAAAB3NzaC1kc3MAAACBANy4kCYLoBAylTLMh64JVr40/F9bciwyI6xUYNGxwUcQSZO4isexdm9EmOGxstbAs2Hcfq9JssaCGBX/gAENQ6+0fI7AYhM2H0UmzITyd/xd8LYljaLeE6qIyfM/1Enjbl04FMsK4FvYr94Dz2ucWLraIrv+mKO8kqN8nR5CXbpxAAAAFQDjJ8bghJac5CEvsPfVXq41Zq03lwAAAIB03IhWaPcHl5FLycI6/jhANgwyk5sIRPmAy2BoQ0pGnZjEaRIz5XRW7uNM4WScbZ6J9Ztk48KDqS/RaWpHzOxolx3xfIaoOJeNv8SyUPleK/+JcJTSX8hVsijQ91W+U9GiMPGlZLWy5uzDt+v4Pfagor7KQuMR7RDMA/CASfwYUAAAAIAL6FIxFwQFgzpslh0KjjKCeZ7EFTrbdIzp8NDGzfA9zXb/znT67oAClH6sVZCjqPQHwE/+4FIw0ek5Bec8fEXuqUDWQvkePUaKaMVnN2SnTMB1TG2I5UbrigrEFMudWzqVZBdb1eH44UrdPhDC3HR94pmM7ppL82elMAqK4XSNgQ==</elem>
+<elem key="fingerprint">07bf0220f08ac8481efc41aea446fa25</elem>
+<elem key="type">ssh-dss</elem>
+<elem key="bits">1024</elem>
+</table>
+<table>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQC4oEueIHc1nDjKzt/MI7Wz8sQi13IZQZuG6FtaK6aBxkTztoBLLqSitQ6y2zB+kEdc9BJTCU2utolXic/JfcBwWJyMi0JDBAXdgctpx4JB731cxHntCldMMOlDdaw57GfdXQVqJLC0ev8o6ADqJCK3tgcP9lJKrbVVS+LmnoCqQaSk32LPGRTPJrYbL3rie6KrTgXmkiWqRRqMYrkp8MiVRSbsN1Hy76km1lt/uh3srXkhM7YLdUp3efVOr2GO2301asEAJK/WAGZHIb5V8R6Qj7LB54v/n62coexOJKq77q6fLB5cgaHdt3nBJWC6Z4aLf66CsvwP6tUsgO7XcD9n</elem>
+<elem key="fingerprint">26dd80a3dfc44b531e534246ef6e30b2</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="bits">2048</elem>
+</table>
+<table>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOJYMfb3+o/QgTjgRIduPs2JRTkRb1ZPY/42VUqM8ZI60YVcWEmryGbRyB5tkGCDrb8465YO0SzAfJSWSJfoLxQ=</elem>
+<elem key="fingerprint">cfc38c31d7477c84e2d21631b28e63a7</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="bits">256</elem>
+</table>
+</script><script id="ssh2-enum-algos" output="&#xa;  kex_algorithms: (7)&#xa;  server_host_key_algorithms: (3)&#xa;  encryption_algorithms: (13)&#xa;  mac_algorithms: (11)&#xa;  compression_algorithms: (2)"><table key="kex_algorithms">
+<elem>ecdh-sha2-nistp256</elem>
+<elem>ecdh-sha2-nistp384</elem>
+<elem>ecdh-sha2-nistp521</elem>
+<elem>diffie-hellman-group-exchange-sha256</elem>
+<elem>diffie-hellman-group-exchange-sha1</elem>
+<elem>diffie-hellman-group14-sha1</elem>
+<elem>diffie-hellman-group1-sha1</elem>
+</table>
+<table key="server_host_key_algorithms">
+<elem>ssh-rsa</elem>
+<elem>ssh-dss</elem>
+<elem>ecdsa-sha2-nistp256</elem>
+</table>
+<table key="encryption_algorithms">
+<elem>aes128-ctr</elem>
+<elem>aes192-ctr</elem>
+<elem>aes256-ctr</elem>
+<elem>arcfour256</elem>
+<elem>arcfour128</elem>
+<elem>aes128-cbc</elem>
+<elem>3des-cbc</elem>
+<elem>blowfish-cbc</elem>
+<elem>cast128-cbc</elem>
+<elem>aes192-cbc</elem>
+<elem>aes256-cbc</elem>
+<elem>arcfour</elem>
+<elem>rijndael-cbc@lysator.liu.se</elem>
+</table>
+<table key="mac_algorithms">
+<elem>hmac-md5</elem>
+<elem>hmac-sha1</elem>
+<elem>umac-64@openssh.com</elem>
+<elem>hmac-sha2-256</elem>
+<elem>hmac-sha2-256-96</elem>
+<elem>hmac-sha2-512</elem>
+<elem>hmac-sha2-512-96</elem>
+<elem>hmac-ripemd160</elem>
+<elem>hmac-ripemd160@openssh.com</elem>
+<elem>hmac-sha1-96</elem>
+<elem>hmac-md5-96</elem>
+</table>
+<table key="compression_algorithms">
+<elem>none</elem>
+<elem>zlib@openssh.com</elem>
+</table>
+</script><script id="ssh-publickey-acceptance" output="&#xa;  Accepted Public Keys: No public keys accepted"><elem key="Accepted Public Keys">No public keys accepted</elem>
+</script><script id="banner" output="SSH-2.0-OpenSSH_5.9p1 Debian-5ubuntu1.7"/><script id="ssh-brute" output="&#xa;  Accounts: No valid accounts found&#xa;  Statistics: Performed 12 guesses in 1817 seconds, average tps: 0.1"><elem key="Accounts">No valid accounts found</elem>
+<elem key="Statistics">Performed 12 guesses in 1817 seconds, average tps: 0.1</elem>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" version="2.2.22" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.2.22</cpe></service><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-config-backup" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-comments-displayer" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.19.1.251&#xa;    &#xa;    Path: http://10.19.1.251:80/style.css&#xa;    Line number: 1&#xa;    Comment: &#xa;        &#xa;        &#xa;        ***************************************************/&#xa;    &#xa;    Path: http://10.19.1.251:80/style.css&#xa;    Line number: 30&#xa;    Comment: &#xa;        &#xa;        &#xa;        ***************************************************/&#xa;"/><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-brute" output="  &#xa;  Path &quot;/&quot; does not require authentication"/><script id="http-server-header" output="Apache/2.2.22 (Ubuntu)"><elem>Apache/2.2.22 (Ubuntu)</elem>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-xssed" output="No previously reported XSS vuln."/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-security-headers" output=""></script><script id="http-chrono" output="Request times for /; avg: 20958.62ms; min: 190.11ms; max: 103653.71ms"/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-errors" output="Couldn&apos;t find any error pages."/><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      Other: 1; css: 1; png: 2&#xa;  Longest directory structure:&#xa;    Depth: 0&#xa;    Dir: /&#xa;  Total files found (by extension):&#xa;    Other: 1; css: 1; png: 2&#xa;"/><script id="citrix-brute-xml" output="FAILED: No domain specified (use ntdomain argument)"/><script id="http-headers" output="&#xa;  Date: Fri, 17 Jun 2022 03:28:57 GMT&#xa;  Server: Apache/2.2.22 (Ubuntu)&#xa;  Last-Modified: Wed, 07 Oct 2015 23:37:54 GMT&#xa;  ETag: &quot;3552-401-5218c3c475880&quot;&#xa;  Accept-Ranges: bytes&#xa;  Content-Length: 1025&#xa;  Vary: Accept-Encoding&#xa;  Connection: close&#xa;  Content-Type: text/html&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-date" output="Fri, 17 Jun 2022 03:28:52 GMT; 0s from local time."><elem key="date">2022-06-17T03:28:52+00:00</elem>
+<elem key="delta">0.0</elem>
+</script><script id="vulners" output="&#xa;  cpe:/a:apache:http_server:2.2.22: &#xa;    &#x9;SSV:60913&#x9;7.5&#x9;https://vulners.com/seebug/SSV:60913&#x9;*EXPLOIT*&#xa;    &#x9;CVE-2017-7679&#x9;7.5&#x9;https://vulners.com/cve/CVE-2017-7679&#xa;    &#x9;CVE-2017-3169&#x9;7.5&#x9;https://vulners.com/cve/CVE-2017-3169&#xa;    &#x9;CVE-2017-3167&#x9;7.5&#x9;https://vulners.com/cve/CVE-2017-3167&#xa;    &#x9;CVE-2013-2249&#x9;7.5&#x9;https://vulners.com/cve/CVE-2013-2249&#xa;    &#x9;MSF:ILITIES/UBUNTU-CVE-2018-1312/&#x9;6.8&#x9;https://vulners.com/metasploit/MSF:ILITIES/UBUNTU-CVE-2018-1312/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/LINUXRPM-RHSA-2013-1012/&#x9;6.8&#x9;https://vulners.com/metasploit/MSF:ILITIES/LINUXRPM-RHSA-2013-1012/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/LINUXRPM-RHSA-2013-1011/&#x9;6.8&#x9;https://vulners.com/metasploit/MSF:ILITIES/LINUXRPM-RHSA-2013-1011/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2018-1312/&#x9;6.8&#x9;https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2018-1312/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2018-1312/&#x9;6.8&#x9;https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2018-1312/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/HUAWEI-EULEROS-2_0_SP1-CVE-2018-1312/&#x9;6.8&#x9;https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP1-CVE-2018-1312/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/CENTOS_LINUX-CVE-2017-17790/&#x9;6.8&#x9;https://vulners.com/metasploit/MSF:ILITIES/CENTOS_LINUX-CVE-2017-17790/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/ALPINE-LINUX-CVE-2018-1312/&#x9;6.8&#x9;https://vulners.com/metasploit/MSF:ILITIES/ALPINE-LINUX-CVE-2018-1312/&#x9;*EXPLOIT*&#xa;    &#x9;CVE-2018-1312&#x9;6.8&#x9;https://vulners.com/cve/CVE-2018-1312&#xa;    &#x9;CVE-2017-9788&#x9;6.4&#x9;https://vulners.com/cve/CVE-2017-9788&#xa;    &#x9;MSF:ILITIES/LINUXRPM-RHSA-2013-1208/&#x9;5.4&#x9;https://vulners.com/metasploit/MSF:ILITIES/LINUXRPM-RHSA-2013-1208/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/LINUXRPM-RHSA-2013-1207/&#x9;5.4&#x9;https://vulners.com/metasploit/MSF:ILITIES/LINUXRPM-RHSA-2013-1207/&#x9;*EXPLOIT*&#xa;    &#x9;SSV:60788&#x9;5.1&#x9;https://vulners.com/seebug/SSV:60788&#x9;*EXPLOIT*&#xa;    &#x9;CVE-2013-1862&#x9;5.1&#x9;https://vulners.com/cve/CVE-2013-1862&#xa;    &#x9;SSV:96537&#x9;5.0&#x9;https://vulners.com/seebug/SSV:96537&#x9;*EXPLOIT*&#xa;    &#x9;SSV:62058&#x9;5.0&#x9;https://vulners.com/seebug/SSV:62058&#x9;*EXPLOIT*&#xa;    &#x9;SSV:61874&#x9;5.0&#x9;https://vulners.com/seebug/SSV:61874&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/SUSE-CVE-2014-0231/&#x9;5.0&#x9;https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2014-0231/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:AUXILIARY/SCANNER/HTTP/APACHE_OPTIONSBLEED&#x9;5.0&#x9;https://vulners.com/metasploit/MSF:AUXILIARY/SCANNER/HTTP/APACHE_OPTIONSBLEED&#x9;*EXPLOIT*&#xa;    &#x9;EXPLOITPACK:C8C256BE0BFF5FE1C0405CB0AA9C075D&#x9;5.0&#x9;https://vulners.com/exploitpack/EXPLOITPACK:C8C256BE0BFF5FE1C0405CB0AA9C075D&#x9;*EXPLOIT*&#xa;    &#x9;EDB-ID:42745&#x9;5.0&#x9;https://vulners.com/exploitdb/EDB-ID:42745&#x9;*EXPLOIT*&#xa;    &#x9;CVE-2017-9798&#x9;5.0&#x9;https://vulners.com/cve/CVE-2017-9798&#xa;    &#x9;CVE-2014-0231&#x9;5.0&#x9;https://vulners.com/cve/CVE-2014-0231&#xa;    &#x9;CVE-2014-0098&#x9;5.0&#x9;https://vulners.com/cve/CVE-2014-0098&#xa;    &#x9;CVE-2013-6438&#x9;5.0&#x9;https://vulners.com/cve/CVE-2013-6438&#xa;    &#x9;CVE-2013-5704&#x9;5.0&#x9;https://vulners.com/cve/CVE-2013-5704&#xa;    &#x9;1337DAY-ID-28573&#x9;5.0&#x9;https://vulners.com/zdt/1337DAY-ID-28573&#x9;*EXPLOIT*&#xa;    &#x9;SSV:60905&#x9;4.3&#x9;https://vulners.com/seebug/SSV:60905&#x9;*EXPLOIT*&#xa;    &#x9;SSV:60657&#x9;4.3&#x9;https://vulners.com/seebug/SSV:60657&#x9;*EXPLOIT*&#xa;    &#x9;SSV:60653&#x9;4.3&#x9;https://vulners.com/seebug/SSV:60653&#x9;*EXPLOIT*&#xa;    &#x9;SSV:60345&#x9;4.3&#x9;https://vulners.com/seebug/SSV:60345&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/SUSE-CVE-2012-4558/&#x9;4.3&#x9;https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2012-4558/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/SUSE-CVE-2012-3499/&#x9;4.3&#x9;https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2012-3499/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/ORACLE-SOLARIS-CVE-2012-4558/&#x9;4.3&#x9;https://vulners.com/metasploit/MSF:ILITIES/ORACLE-SOLARIS-CVE-2012-4558/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/IBM-HTTP_SERVER-CVE-2012-3499/&#x9;4.3&#x9;https://vulners.com/metasploit/MSF:ILITIES/IBM-HTTP_SERVER-CVE-2012-3499/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2016-4975/&#x9;4.3&#x9;https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2016-4975/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/HPUX-CVE-2012-4558/&#x9;4.3&#x9;https://vulners.com/metasploit/MSF:ILITIES/HPUX-CVE-2012-4558/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/CENTOS_LINUX-CVE-2012-4558/&#x9;4.3&#x9;https://vulners.com/metasploit/MSF:ILITIES/CENTOS_LINUX-CVE-2012-4558/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/CENTOS_LINUX-CVE-2012-3499/&#x9;4.3&#x9;https://vulners.com/metasploit/MSF:ILITIES/CENTOS_LINUX-CVE-2012-3499/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/APACHE-HTTPD-CVE-2012-4558/&#x9;4.3&#x9;https://vulners.com/metasploit/MSF:ILITIES/APACHE-HTTPD-CVE-2012-4558/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/APACHE-HTTPD-CVE-2012-3499/&#x9;4.3&#x9;https://vulners.com/metasploit/MSF:ILITIES/APACHE-HTTPD-CVE-2012-3499/&#x9;*EXPLOIT*&#xa;    &#x9;CVE-2016-4975&#x9;4.3&#x9;https://vulners.com/cve/CVE-2016-4975&#xa;    &#x9;CVE-2013-1896&#x9;4.3&#x9;https://vulners.com/cve/CVE-2013-1896&#xa;    &#x9;CVE-2012-4558&#x9;4.3&#x9;https://vulners.com/cve/CVE-2012-4558&#xa;    &#x9;CVE-2012-3499&#x9;4.3&#x9;https://vulners.com/cve/CVE-2012-3499&#xa;    &#x9;CVE-2012-2687&#x9;2.6&#x9;https://vulners.com/cve/CVE-2012-2687"><table key="cpe:/a:apache:http_server:2.2.22">
+<table>
+<elem key="cvss">7.5</elem>
+<elem key="id">SSV:60913</elem>
+<elem key="type">seebug</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">7.5</elem>
+<elem key="id">CVE-2017-7679</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">7.5</elem>
+<elem key="id">CVE-2017-3169</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">7.5</elem>
+<elem key="id">CVE-2017-3167</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">7.5</elem>
+<elem key="id">CVE-2013-2249</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">6.8</elem>
+<elem key="id">MSF:ILITIES/UBUNTU-CVE-2018-1312/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">6.8</elem>
+<elem key="id">MSF:ILITIES/LINUXRPM-RHSA-2013-1012/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">6.8</elem>
+<elem key="id">MSF:ILITIES/LINUXRPM-RHSA-2013-1011/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">6.8</elem>
+<elem key="id">MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2018-1312/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">6.8</elem>
+<elem key="id">MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2018-1312/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">6.8</elem>
+<elem key="id">MSF:ILITIES/HUAWEI-EULEROS-2_0_SP1-CVE-2018-1312/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">6.8</elem>
+<elem key="id">MSF:ILITIES/CENTOS_LINUX-CVE-2017-17790/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">6.8</elem>
+<elem key="id">MSF:ILITIES/ALPINE-LINUX-CVE-2018-1312/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">6.8</elem>
+<elem key="id">CVE-2018-1312</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">6.4</elem>
+<elem key="id">CVE-2017-9788</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.4</elem>
+<elem key="id">MSF:ILITIES/LINUXRPM-RHSA-2013-1208/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">5.4</elem>
+<elem key="id">MSF:ILITIES/LINUXRPM-RHSA-2013-1207/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">5.1</elem>
+<elem key="id">SSV:60788</elem>
+<elem key="type">seebug</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">5.1</elem>
+<elem key="id">CVE-2013-1862</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="id">SSV:96537</elem>
+<elem key="type">seebug</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="id">SSV:62058</elem>
+<elem key="type">seebug</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="id">SSV:61874</elem>
+<elem key="type">seebug</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="id">MSF:ILITIES/SUSE-CVE-2014-0231/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="id">MSF:AUXILIARY/SCANNER/HTTP/APACHE_OPTIONSBLEED</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="id">EXPLOITPACK:C8C256BE0BFF5FE1C0405CB0AA9C075D</elem>
+<elem key="type">exploitpack</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="id">EDB-ID:42745</elem>
+<elem key="type">exploitdb</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="id">CVE-2017-9798</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="id">CVE-2014-0231</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="id">CVE-2014-0098</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="id">CVE-2013-6438</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="id">CVE-2013-5704</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="id">1337DAY-ID-28573</elem>
+<elem key="type">zdt</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">SSV:60905</elem>
+<elem key="type">seebug</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">SSV:60657</elem>
+<elem key="type">seebug</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">SSV:60653</elem>
+<elem key="type">seebug</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">SSV:60345</elem>
+<elem key="type">seebug</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">MSF:ILITIES/SUSE-CVE-2012-4558/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">MSF:ILITIES/SUSE-CVE-2012-3499/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">MSF:ILITIES/ORACLE-SOLARIS-CVE-2012-4558/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">MSF:ILITIES/IBM-HTTP_SERVER-CVE-2012-3499/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2016-4975/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">MSF:ILITIES/HPUX-CVE-2012-4558/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">MSF:ILITIES/CENTOS_LINUX-CVE-2012-4558/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">MSF:ILITIES/CENTOS_LINUX-CVE-2012-3499/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">MSF:ILITIES/APACHE-HTTPD-CVE-2012-4558/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">MSF:ILITIES/APACHE-HTTPD-CVE-2012-3499/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">CVE-2016-4975</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">CVE-2013-1896</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">CVE-2012-4558</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">CVE-2012-3499</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">2.6</elem>
+<elem key="id">CVE-2012-2687</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+</table>
+</script><script id="http-slowloris" output="false">false</script><script id="http-vhosts" output="&#xa;128 names had status 200"/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-title" output="Hack me if you can"><elem key="title">Hack me if you can</elem>
+</script></port>
+<port protocol="tcp" portid="143"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="imap" product="Dovecot imapd" method="probed" conf="10"><cpe>cpe:/a:dovecot:dovecot</cpe></service><script id="ssl-cert" output="Subject: commonName=localhost/organizationName=Dovecot mail server&#xa;Not valid before: 2015-10-08T20:57:30&#xa;Not valid after:  2025-10-07T20:57:30"><table key="subject">
+<elem key="commonName">localhost</elem>
+<elem key="emailAddress">root@mail.borntosec.net</elem>
+<elem key="organizationName">Dovecot mail server</elem>
+<elem key="organizationalUnitName">localhost</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">localhost</elem>
+<elem key="emailAddress">root@mail.borntosec.net</elem>
+<elem key="organizationName">Dovecot mail server</elem>
+<elem key="organizationalUnitName">localhost</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">CA633D0D88E9890D8D9A719048DFC3B5F1661AFEA0AC2ABDBE1473A0841F3AD8E33FF31BF1EC67F72034B81890B7AF11FD3E0C83E5898486A3BCA1B76F306F25B5199181BE1E7060145F266F010DCE62CB2B9AC901B100E2979A0C9CBF9F2356FAF892E1743F4C56E6F047C737C3175017076A8D2A0D61E6873A332D68C7A13C4C74B152B0B0CC6D9BE08F2A769880908FC6F8CCBC5399107D290BE4E9CA679675FA96372FD3F3A4D33A4499B1E777DF8BD8C19479D0F935533B3C7BDA7AB22A047F6ADE4FFCEE164B1C4CCED558E9DF1E8DA03431011C2231107535C5C829DF8F59875D11E91DA090EA256F91B2702662845955E370446821532293BCE7E213</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">0E:14:C7:00:2B:77:6B:C5:C2:79:20:B9:90:0E:94:8C:F4:D5:0A:AC</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">keyid:0E:14:C7:00:2B:77:6B:C5:C2:79:20:B9:90:0E:94:8C:F4:D5:0A:AC&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:TRUE</elem>
+</table>
+</table>
+<elem key="sig_algo">sha1WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2015-10-08T20:57:30</elem>
+<elem key="notAfter">2025-10-07T20:57:30</elem>
+</table>
+<elem key="md5">ea11cc28787e147ea72c8588e562e9b7</elem>
+<elem key="sha1">2d09d85fe5019a67413ec2d1623711dea91cafbe</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDrzCCApegAwIBAgIJAN968TzwGVlvMA0GCSqGSIb3DQEBBQUAMG4xHDAaBgNV&#xa;BAoME0RvdmVjb3QgbWFpbCBzZXJ2ZXIxEjAQBgNVBAsMCWxvY2FsaG9zdDESMBAG&#xa;A1UEAwwJbG9jYWxob3N0MSYwJAYJKoZIhvcNAQkBFhdyb290QG1haWwuYm9ybnRv&#xa;c2VjLm5ldDAeFw0xNTEwMDgyMDU3MzBaFw0yNTEwMDcyMDU3MzBaMG4xHDAaBgNV&#xa;BAoME0RvdmVjb3QgbWFpbCBzZXJ2ZXIxEjAQBgNVBAsMCWxvY2FsaG9zdDESMBAG&#xa;A1UEAwwJbG9jYWxob3N0MSYwJAYJKoZIhvcNAQkBFhdyb290QG1haWwuYm9ybnRv&#xa;c2VjLm5ldDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMpjPQ2I6YkN&#xa;jZpxkEjfw7XxZhr+oKwqvb4Uc6CEHzrY4z/zG/HsZ/cgNLgYkLevEf0+DIPliYSG&#xa;o7yht28wbyW1GZGBvh5wYBRfJm8BDc5iyyuayQGxAOKXmgycv58jVvr4kuF0P0xW&#xa;5vBHxzfDF1AXB2qNKg1h5oc6My1ox6E8THSxUrCwzG2b4I8qdpiAkI/G+My8U5kQ&#xa;fSkL5OnKZ5Z1+pY3L9PzpNM6RJmx53ffi9jBlHnQ+TVTOzx72nqyKgR/at5P/O4W&#xa;SxxMztVY6d8ejaA0MQEcIjEQdTXFyCnfj1mHXRHpHaCQ6iVvkbJwJmKEWVXjcERo&#xa;IVMik7zn4hMCAwEAAaNQME4wHQYDVR0OBBYEFA4UxwArd2vFwnkguZAOlIz01Qqs&#xa;MB8GA1UdIwQYMBaAFA4UxwArd2vFwnkguZAOlIz01QqsMAwGA1UdEwQFMAMBAf8w&#xa;DQYJKoZIhvcNAQEFBQADggEBAKuoOkJBTDFjE6a066CPXQ6ulE6siN1B+nw95NnO&#xa;N/RZrjEkEr24HAFJxn1zXgjEhlYToJgTNTCGLpOKr0weFEJcTiZLNuh7v++WLIM5&#xa;YBpwscnbxL+2ak9PLbGGVyq+RrX3RTzD5t6WZChwxCPqcNORB9pQknO9a7qG9kpl&#xa;0ljGwg/xYvY+tETYBSz88Wy053Dq+4on5tzkeLOxVi1WSA3XxdbQrS5kmfGCCIVi&#xa;Phl8QItIxBdZGoOY2niOszqDU4gaqKsx7wcIsDcKoXl2lNutwV8Eb/HLBo8KBXjr&#xa;u3axYWy9JvJQkowL0Z5oHss3a2J3ErljjQLUlUFR6sd+tz0=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="imap-brute" output="&#xa;  Accounts: No valid accounts found&#xa;  Statistics: Performed 6302 guesses in 1926 seconds, average tps: 10.7"><elem key="Accounts">No valid accounts found</elem>
+<elem key="Statistics">Performed 6302 guesses in 1926 seconds, average tps: 10.7</elem>
+</script><script id="ssl-poodle" output="&#xa;  VULNERABLE:&#xa;  SSL POODLE information leak&#xa;    State: LIKELY VULNERABLE&#xa;    IDs:  BID:70574  CVE:CVE-2014-3566&#xa;          The SSL protocol 3.0, as used in OpenSSL through 1.0.1i and other&#xa;          products, uses nondeterministic CBC padding, which makes it easier&#xa;          for man-in-the-middle attackers to obtain cleartext data via a&#xa;          padding-oracle attack, aka the &quot;POODLE&quot; issue.&#xa;    Disclosure date: 2014-10-14&#xa;    Check results:&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA&#xa;      TLS_FALLBACK_SCSV properly implemented&#xa;    References:&#xa;      https://www.imperialviolet.org/2014/10/14/poodle.html&#xa;      https://www.securityfocus.com/bid/70574&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566&#xa;      https://www.openssl.org/~bodo/ssl-poodle.pdf&#xa;"><table key="CVE-2014-3566">
+<elem key="title">SSL POODLE information leak</elem>
+<elem key="state">LIKELY VULNERABLE</elem>
+<table key="ids">
+<elem>BID:70574</elem>
+<elem>CVE:CVE-2014-3566</elem>
+</table>
+<table key="description">
+<elem>    The SSL protocol 3.0, as used in OpenSSL through 1.0.1i and other&#xa;    products, uses nondeterministic CBC padding, which makes it easier&#xa;    for man-in-the-middle attackers to obtain cleartext data via a&#xa;    padding-oracle attack, aka the &quot;POODLE&quot; issue.</elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="day">14</elem>
+<elem key="month">10</elem>
+<elem key="year">2014</elem>
+</table>
+</table>
+<elem key="disclosure">2014-10-14</elem>
+<table key="check_results">
+<elem>TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem>TLS_FALLBACK_SCSV properly implemented</elem>
+</table>
+<table key="refs">
+<elem>https://www.imperialviolet.org/2014/10/14/poodle.html</elem>
+<elem>https://www.securityfocus.com/bid/70574</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566</elem>
+<elem>https://www.openssl.org/~bodo/ssl-poodle.pdf</elem>
+</table>
+</table>
+</script><script id="ssl-date" output="2022-06-17T04:01:12+00:00; 0s from scanner time."><elem key="delta">0.0</elem>
+<elem key="date">2022-06-17T04:01:12+00:00</elem>
+</script><script id="imap-capabilities" output="LOGIN-REFERRALS more ENABLE SASL-IR have ID IDLE post-login listed Pre-login IMAP4rev1 capabilities STARTTLS LOGINDISABLEDA0001 LITERAL+ OK"/><script id="ssl-enum-ciphers" output="&#xa;  SSLv3: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - F&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - F&#xa;      TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - F&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      CBC-mode cipher in SSLv3 (CVE-2014-3566)&#xa;      Ciphersuite uses MD5 for message integrity&#xa;      Insecure certificate signature (SHA1), score capped at F&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - F&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - F&#xa;      TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - F&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      Ciphersuite uses MD5 for message integrity&#xa;      Insecure certificate signature (SHA1), score capped at F&#xa;  TLSv1.1: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - F&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - F&#xa;      TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - F&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      Ciphersuite uses MD5 for message integrity&#xa;      Insecure certificate signature (SHA1), score capped at F&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - F&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - F&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - F&#xa;      TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - F&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      Ciphersuite uses MD5 for message integrity&#xa;      Insecure certificate signature (SHA1), score capped at F&#xa;  least strength: F"><table key="SSLv3">
+<table key="ciphers">
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_MD5</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>CBC-mode cipher in SSLv3 (CVE-2014-3566)</elem>
+<elem>Ciphersuite uses MD5 for message integrity</elem>
+<elem>Insecure certificate signature (SHA1), score capped at F</elem>
+</table>
+</table>
+<table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_MD5</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>Ciphersuite uses MD5 for message integrity</elem>
+<elem>Insecure certificate signature (SHA1), score capped at F</elem>
+</table>
+</table>
+<table key="TLSv1.1">
+<table key="ciphers">
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_MD5</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>Ciphersuite uses MD5 for message integrity</elem>
+<elem>Insecure certificate signature (SHA1), score capped at F</elem>
+</table>
+</table>
+<table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA256</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA256</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_MD5</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>Ciphersuite uses MD5 for message integrity</elem>
+<elem>Insecure certificate signature (SHA1), score capped at F</elem>
+</table>
+</table>
+<elem key="least strength">F</elem>
+</script><script id="ssl-dh-params" output="&#xa;  VULNERABLE:&#xa;  Diffie-Hellman Key Exchange Insufficient Group Strength&#xa;    State: VULNERABLE&#xa;      Transport Layer Security (TLS) services that use Diffie-Hellman groups&#xa;      of insufficient strength, especially those using one of a few commonly&#xa;      shared groups, may be susceptible to passive eavesdropping attacks.&#xa;    Check results:&#xa;      WEAK DH GROUP 1&#xa;            Cipher Suite: TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA&#xa;            Modulus Type: Safe prime&#xa;            Modulus Source: Unknown/Custom-generated&#xa;            Modulus Length: 1024&#xa;            Generator Length: 8&#xa;            Public Key Length: 1024&#xa;    References:&#xa;      https://weakdh.org&#xa;"><table key="NMAP-36">
+<elem key="title">Diffie-Hellman Key Exchange Insufficient Group Strength</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="description">
+<elem>Transport Layer Security (TLS) services that use Diffie-Hellman groups&#xa;of insufficient strength, especially those using one of a few commonly&#xa;shared groups, may be susceptible to passive eavesdropping attacks.</elem>
+</table>
+<table key="check_results">
+<elem>WEAK DH GROUP 1&#xa;      Cipher Suite: TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA&#xa;      Modulus Type: Safe prime&#xa;      Modulus Source: Unknown/Custom-generated&#xa;      Modulus Length: 1024&#xa;      Generator Length: 8&#xa;      Public Key Length: 1024</elem>
+</table>
+<table key="refs">
+<elem>https://weakdh.org</elem>
+</table>
+</table>
+</script><script id="banner" output="* OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ...&#xa;"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" version="2.2.22" hostname="127.0.1.1" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.2.22</cpe></service><script id="http-errors" output="&#xa;Spidering limited to: maxpagecount=40; withinhost=10.19.1.251&#xa;  Found the following error pages: &#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://10.19.1.251:443/&#xa;"/><script id="http-config-backup" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="citrix-brute-xml" output="FAILED: No domain specified (use ntdomain argument)"/><script id="ssl-cert" output="Subject: commonName=BornToSec&#xa;Not valid before: 2015-10-08T00:19:46&#xa;Not valid after:  2025-10-05T00:19:46"><table key="subject">
+<elem key="commonName">BornToSec</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">BornToSec</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">BCD4286723467871A94CE4341CFC9C3AA72FB76AF61F28509E46A1DB3B3FCDC640414455CA0D2C015FBCFDFB20E38C849B159B1BECE738AB4337322AD1BE2BD5ED15ECBFDA32E7E4F054E1B7A6BC8AFD2415C9A4D1E5AB98FE8987378B15DBCDE2781C060D5BA37F6BDDCE3D01CDF66BECFC29A7E882C7ABC65D5870B845703F7028F1255C90C734C57111C98412800F6B97B389DE12ACC1FCEA869E95B8930839EDFC403D879A3E12FD20270BC5F9316C2CA48E594B253B605DDA2A9B84CE9042914EE742BE9E154F67ABA73BFEEDEFAECE460233958C9E2FDF68FEC82F64C003F2D2CEF9E921C3A1B6A0B95631F486AC75D2A356815AFB0CB4CCC784106CED</elem>
+<elem key="exponent">65537</elem>
+</table>
+<elem key="sig_algo">sha1WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2015-10-08T00:19:46</elem>
+<elem key="notAfter">2025-10-05T00:19:46</elem>
+</table>
+<elem key="md5">3f6302ca0bb1e73299876887362386a3</elem>
+<elem key="sha1">eebcf8de3422dd6353149d47811ff6d18f77c98d</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIICpDCCAYwCCQDVG5xgrjCJoDANBgkqhkiG9w0BAQUFADAUMRIwEAYDVQQDEwlC&#xa;b3JuVG9TZWMwHhcNMTUxMDA4MDAxOTQ2WhcNMjUxMDA1MDAxOTQ2WjAUMRIwEAYD&#xa;VQQDEwlCb3JuVG9TZWMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC8&#xa;1ChnI0Z4calM5DQc/Jw6py+3avYfKFCeRqHbOz/NxkBBRFXKDSwBX7z9+yDjjISb&#xa;FZsb7Oc4q0M3MirRvivV7RXsv9oy5+TwVOG3pryK/SQVyaTR5auY/omHN4sV283i&#xa;eBwGDVujf2vdzj0BzfZr7Pwpp+iCx6vGXVhwuEVwP3Ao8SVckMc0xXERyYQSgA9r&#xa;l7OJ3hKswfzqhp6VuJMIOe38QD2Hmj4S/SAnC8X5MWwspI5ZSyU7YF3aKpuEzpBC&#xa;kU7nQr6eFU9nq6c7/u3vrs5GAjOVjJ4v32j+yC9kwAPy0s756SHDobaguVYx9Ias&#xa;ddKjVoFa+wy0zMeEEGztAgMBAAEwDQYJKoZIhvcNAQEFBQADggEBAJrrrBK9y1dz&#xa;SG5vLml0PrZR66L+lHCYpz/hSmmV2DyeYtRcZ5yl0qxBCtT5L0L/e2PGdXegQz/A&#xa;L99S3zhfSkB+tF9iTEx6RfInG7SvYlaDrMdilCRsto8VDad4NXNq8+hJRqkpTRoO&#xa;hEPe/J+lVgUcekcUFgQ1c+gpRtMdzci11hRdTapLL8Ve/8SCVuTVK3LL/sZ0Oz8l&#xa;l+Gvvh/7EZ7DylyPNH1vq7MZvy+cpEadrimGX10dKXiYfhUFbnq3bd0ZXGHKT1iA&#xa;JGtUfQ7nNuJ8R5MaPr+73mhbV4wwcmaDz1e66XUi9EcvSWvAe+zSy93YwsV1eX91&#xa;FU56FFipSCQ=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-cookie-flags" output="&#xa;  /forum/: &#xa;    PHPSESSID: &#xa;      httponly flag not set"><table key="/forum/">
+<table key="PHPSESSID">
+<elem>httponly flag not set</elem>
+</table>
+</table>
+</script><script id="http-chrono" output="Request times for /; avg: 92.93ms; min: 47.98ms; max: 137.86ms"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;  Longest directory structure:&#xa;    Depth: 0&#xa;    Dir: /&#xa;  Total files found (by extension):&#xa;    &#xa;"/><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 404&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">404</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-security-headers" output="&#xa;  Strict_Transport_Security: &#xa;    HSTS not configured in HTTPS Server"><table key="Strict_Transport_Security">
+<elem>HSTS not configured in HTTPS Server</elem>
+</table>
+</script><script id="http-vhosts" output="&#xa;127 names had status 404&#xa;erp"/><script id="http-xssed" output="No previously reported XSS vuln."/><script id="ssl-poodle" output="&#xa;  VULNERABLE:&#xa;  SSL POODLE information leak&#xa;    State: LIKELY VULNERABLE&#xa;    IDs:  BID:70574  CVE:CVE-2014-3566&#xa;          The SSL protocol 3.0, as used in OpenSSL through 1.0.1i and other&#xa;          products, uses nondeterministic CBC padding, which makes it easier&#xa;          for man-in-the-middle attackers to obtain cleartext data via a&#xa;          padding-oracle attack, aka the &quot;POODLE&quot; issue.&#xa;    Disclosure date: 2014-10-14&#xa;    Check results:&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA&#xa;      TLS_FALLBACK_SCSV properly implemented&#xa;    References:&#xa;      https://www.imperialviolet.org/2014/10/14/poodle.html&#xa;      https://www.securityfocus.com/bid/70574&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566&#xa;      https://www.openssl.org/~bodo/ssl-poodle.pdf&#xa;"><table key="CVE-2014-3566">
+<elem key="title">SSL POODLE information leak</elem>
+<elem key="state">LIKELY VULNERABLE</elem>
+<table key="ids">
+<elem>BID:70574</elem>
+<elem>CVE:CVE-2014-3566</elem>
+</table>
+<table key="description">
+<elem>    The SSL protocol 3.0, as used in OpenSSL through 1.0.1i and other&#xa;    products, uses nondeterministic CBC padding, which makes it easier&#xa;    for man-in-the-middle attackers to obtain cleartext data via a&#xa;    padding-oracle attack, aka the &quot;POODLE&quot; issue.</elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="day">14</elem>
+<elem key="month">10</elem>
+<elem key="year">2014</elem>
+</table>
+</table>
+<elem key="disclosure">2014-10-14</elem>
+<table key="check_results">
+<elem>TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem>TLS_FALLBACK_SCSV properly implemented</elem>
+</table>
+<table key="refs">
+<elem>https://www.imperialviolet.org/2014/10/14/poodle.html</elem>
+<elem>https://www.securityfocus.com/bid/70574</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566</elem>
+<elem>https://www.openssl.org/~bodo/ssl-poodle.pdf</elem>
+</table>
+</table>
+</script><script id="http-headers" output="&#xa;  Date: Fri, 17 Jun 2022 04:01:07 GMT&#xa;  Server: Apache/2.2.22 (Ubuntu)&#xa;  Vary: Accept-Encoding&#xa;  Content-Length: 276&#xa;  Connection: close&#xa;  Content-Type: text/html; charset=iso-8859-1&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-enum" output="&#xa;  /forum/: Forum&#xa;  /phpmyadmin/: phpMyAdmin&#xa;  /webmail/src/login.php: squirrelmail version 1.4.22&#xa;  /webmail/images/sm_logo.png: SquirrelMail&#xa;"/><script id="http-date" output="Fri, 17 Jun 2022 03:28:57 GMT; 0s from local time."><elem key="date">2022-06-17T03:28:57+00:00</elem>
+<elem key="delta">0.0</elem>
+</script><script id="http-slowloris" output="false">false</script><script id="http-server-header" output="Apache/2.2.22 (Ubuntu)"><elem>Apache/2.2.22 (Ubuntu)</elem>
+</script><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="ssl-date" output="2022-06-17T04:01:12+00:00; 0s from scanner time."><elem key="delta">0.0</elem>
+<elem key="date">2022-06-17T04:01:12+00:00</elem>
+</script><script id="vulners" output="&#xa;  cpe:/a:apache:http_server:2.2.22: &#xa;    &#x9;SSV:60913&#x9;7.5&#x9;https://vulners.com/seebug/SSV:60913&#x9;*EXPLOIT*&#xa;    &#x9;CVE-2017-7679&#x9;7.5&#x9;https://vulners.com/cve/CVE-2017-7679&#xa;    &#x9;CVE-2017-3169&#x9;7.5&#x9;https://vulners.com/cve/CVE-2017-3169&#xa;    &#x9;CVE-2017-3167&#x9;7.5&#x9;https://vulners.com/cve/CVE-2017-3167&#xa;    &#x9;CVE-2013-2249&#x9;7.5&#x9;https://vulners.com/cve/CVE-2013-2249&#xa;    &#x9;MSF:ILITIES/UBUNTU-CVE-2018-1312/&#x9;6.8&#x9;https://vulners.com/metasploit/MSF:ILITIES/UBUNTU-CVE-2018-1312/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/LINUXRPM-RHSA-2013-1012/&#x9;6.8&#x9;https://vulners.com/metasploit/MSF:ILITIES/LINUXRPM-RHSA-2013-1012/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/LINUXRPM-RHSA-2013-1011/&#x9;6.8&#x9;https://vulners.com/metasploit/MSF:ILITIES/LINUXRPM-RHSA-2013-1011/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2018-1312/&#x9;6.8&#x9;https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2018-1312/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2018-1312/&#x9;6.8&#x9;https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2018-1312/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/HUAWEI-EULEROS-2_0_SP1-CVE-2018-1312/&#x9;6.8&#x9;https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP1-CVE-2018-1312/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/CENTOS_LINUX-CVE-2017-17790/&#x9;6.8&#x9;https://vulners.com/metasploit/MSF:ILITIES/CENTOS_LINUX-CVE-2017-17790/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/ALPINE-LINUX-CVE-2018-1312/&#x9;6.8&#x9;https://vulners.com/metasploit/MSF:ILITIES/ALPINE-LINUX-CVE-2018-1312/&#x9;*EXPLOIT*&#xa;    &#x9;CVE-2018-1312&#x9;6.8&#x9;https://vulners.com/cve/CVE-2018-1312&#xa;    &#x9;CVE-2017-9788&#x9;6.4&#x9;https://vulners.com/cve/CVE-2017-9788&#xa;    &#x9;MSF:ILITIES/LINUXRPM-RHSA-2013-1208/&#x9;5.4&#x9;https://vulners.com/metasploit/MSF:ILITIES/LINUXRPM-RHSA-2013-1208/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/LINUXRPM-RHSA-2013-1207/&#x9;5.4&#x9;https://vulners.com/metasploit/MSF:ILITIES/LINUXRPM-RHSA-2013-1207/&#x9;*EXPLOIT*&#xa;    &#x9;SSV:60788&#x9;5.1&#x9;https://vulners.com/seebug/SSV:60788&#x9;*EXPLOIT*&#xa;    &#x9;CVE-2013-1862&#x9;5.1&#x9;https://vulners.com/cve/CVE-2013-1862&#xa;    &#x9;SSV:96537&#x9;5.0&#x9;https://vulners.com/seebug/SSV:96537&#x9;*EXPLOIT*&#xa;    &#x9;SSV:62058&#x9;5.0&#x9;https://vulners.com/seebug/SSV:62058&#x9;*EXPLOIT*&#xa;    &#x9;SSV:61874&#x9;5.0&#x9;https://vulners.com/seebug/SSV:61874&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/SUSE-CVE-2014-0231/&#x9;5.0&#x9;https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2014-0231/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:AUXILIARY/SCANNER/HTTP/APACHE_OPTIONSBLEED&#x9;5.0&#x9;https://vulners.com/metasploit/MSF:AUXILIARY/SCANNER/HTTP/APACHE_OPTIONSBLEED&#x9;*EXPLOIT*&#xa;    &#x9;EXPLOITPACK:C8C256BE0BFF5FE1C0405CB0AA9C075D&#x9;5.0&#x9;https://vulners.com/exploitpack/EXPLOITPACK:C8C256BE0BFF5FE1C0405CB0AA9C075D&#x9;*EXPLOIT*&#xa;    &#x9;EDB-ID:42745&#x9;5.0&#x9;https://vulners.com/exploitdb/EDB-ID:42745&#x9;*EXPLOIT*&#xa;    &#x9;CVE-2017-9798&#x9;5.0&#x9;https://vulners.com/cve/CVE-2017-9798&#xa;    &#x9;CVE-2014-0231&#x9;5.0&#x9;https://vulners.com/cve/CVE-2014-0231&#xa;    &#x9;CVE-2014-0098&#x9;5.0&#x9;https://vulners.com/cve/CVE-2014-0098&#xa;    &#x9;CVE-2013-6438&#x9;5.0&#x9;https://vulners.com/cve/CVE-2013-6438&#xa;    &#x9;CVE-2013-5704&#x9;5.0&#x9;https://vulners.com/cve/CVE-2013-5704&#xa;    &#x9;1337DAY-ID-28573&#x9;5.0&#x9;https://vulners.com/zdt/1337DAY-ID-28573&#x9;*EXPLOIT*&#xa;    &#x9;SSV:60905&#x9;4.3&#x9;https://vulners.com/seebug/SSV:60905&#x9;*EXPLOIT*&#xa;    &#x9;SSV:60657&#x9;4.3&#x9;https://vulners.com/seebug/SSV:60657&#x9;*EXPLOIT*&#xa;    &#x9;SSV:60653&#x9;4.3&#x9;https://vulners.com/seebug/SSV:60653&#x9;*EXPLOIT*&#xa;    &#x9;SSV:60345&#x9;4.3&#x9;https://vulners.com/seebug/SSV:60345&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/SUSE-CVE-2012-4558/&#x9;4.3&#x9;https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2012-4558/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/SUSE-CVE-2012-3499/&#x9;4.3&#x9;https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2012-3499/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/ORACLE-SOLARIS-CVE-2012-4558/&#x9;4.3&#x9;https://vulners.com/metasploit/MSF:ILITIES/ORACLE-SOLARIS-CVE-2012-4558/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/IBM-HTTP_SERVER-CVE-2012-3499/&#x9;4.3&#x9;https://vulners.com/metasploit/MSF:ILITIES/IBM-HTTP_SERVER-CVE-2012-3499/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2016-4975/&#x9;4.3&#x9;https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2016-4975/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/HPUX-CVE-2012-4558/&#x9;4.3&#x9;https://vulners.com/metasploit/MSF:ILITIES/HPUX-CVE-2012-4558/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/CENTOS_LINUX-CVE-2012-4558/&#x9;4.3&#x9;https://vulners.com/metasploit/MSF:ILITIES/CENTOS_LINUX-CVE-2012-4558/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/CENTOS_LINUX-CVE-2012-3499/&#x9;4.3&#x9;https://vulners.com/metasploit/MSF:ILITIES/CENTOS_LINUX-CVE-2012-3499/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/APACHE-HTTPD-CVE-2012-4558/&#x9;4.3&#x9;https://vulners.com/metasploit/MSF:ILITIES/APACHE-HTTPD-CVE-2012-4558/&#x9;*EXPLOIT*&#xa;    &#x9;MSF:ILITIES/APACHE-HTTPD-CVE-2012-3499/&#x9;4.3&#x9;https://vulners.com/metasploit/MSF:ILITIES/APACHE-HTTPD-CVE-2012-3499/&#x9;*EXPLOIT*&#xa;    &#x9;CVE-2016-4975&#x9;4.3&#x9;https://vulners.com/cve/CVE-2016-4975&#xa;    &#x9;CVE-2013-1896&#x9;4.3&#x9;https://vulners.com/cve/CVE-2013-1896&#xa;    &#x9;CVE-2012-4558&#x9;4.3&#x9;https://vulners.com/cve/CVE-2012-4558&#xa;    &#x9;CVE-2012-3499&#x9;4.3&#x9;https://vulners.com/cve/CVE-2012-3499&#xa;    &#x9;CVE-2012-2687&#x9;2.6&#x9;https://vulners.com/cve/CVE-2012-2687"><table key="cpe:/a:apache:http_server:2.2.22">
+<table>
+<elem key="cvss">7.5</elem>
+<elem key="id">SSV:60913</elem>
+<elem key="type">seebug</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">7.5</elem>
+<elem key="id">CVE-2017-7679</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">7.5</elem>
+<elem key="id">CVE-2017-3169</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">7.5</elem>
+<elem key="id">CVE-2017-3167</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">7.5</elem>
+<elem key="id">CVE-2013-2249</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">6.8</elem>
+<elem key="id">MSF:ILITIES/UBUNTU-CVE-2018-1312/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">6.8</elem>
+<elem key="id">MSF:ILITIES/LINUXRPM-RHSA-2013-1012/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">6.8</elem>
+<elem key="id">MSF:ILITIES/LINUXRPM-RHSA-2013-1011/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">6.8</elem>
+<elem key="id">MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2018-1312/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">6.8</elem>
+<elem key="id">MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2018-1312/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">6.8</elem>
+<elem key="id">MSF:ILITIES/HUAWEI-EULEROS-2_0_SP1-CVE-2018-1312/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">6.8</elem>
+<elem key="id">MSF:ILITIES/CENTOS_LINUX-CVE-2017-17790/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">6.8</elem>
+<elem key="id">MSF:ILITIES/ALPINE-LINUX-CVE-2018-1312/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">6.8</elem>
+<elem key="id">CVE-2018-1312</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">6.4</elem>
+<elem key="id">CVE-2017-9788</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.4</elem>
+<elem key="id">MSF:ILITIES/LINUXRPM-RHSA-2013-1208/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">5.4</elem>
+<elem key="id">MSF:ILITIES/LINUXRPM-RHSA-2013-1207/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">5.1</elem>
+<elem key="id">SSV:60788</elem>
+<elem key="type">seebug</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">5.1</elem>
+<elem key="id">CVE-2013-1862</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="id">SSV:96537</elem>
+<elem key="type">seebug</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="id">SSV:62058</elem>
+<elem key="type">seebug</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="id">SSV:61874</elem>
+<elem key="type">seebug</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="id">MSF:ILITIES/SUSE-CVE-2014-0231/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="id">MSF:AUXILIARY/SCANNER/HTTP/APACHE_OPTIONSBLEED</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="id">EXPLOITPACK:C8C256BE0BFF5FE1C0405CB0AA9C075D</elem>
+<elem key="type">exploitpack</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="id">EDB-ID:42745</elem>
+<elem key="type">exploitdb</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="id">CVE-2017-9798</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="id">CVE-2014-0231</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="id">CVE-2014-0098</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="id">CVE-2013-6438</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="id">CVE-2013-5704</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="id">1337DAY-ID-28573</elem>
+<elem key="type">zdt</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">SSV:60905</elem>
+<elem key="type">seebug</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">SSV:60657</elem>
+<elem key="type">seebug</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">SSV:60653</elem>
+<elem key="type">seebug</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">SSV:60345</elem>
+<elem key="type">seebug</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">MSF:ILITIES/SUSE-CVE-2012-4558/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">MSF:ILITIES/SUSE-CVE-2012-3499/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">MSF:ILITIES/ORACLE-SOLARIS-CVE-2012-4558/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">MSF:ILITIES/IBM-HTTP_SERVER-CVE-2012-3499/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2016-4975/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">MSF:ILITIES/HPUX-CVE-2012-4558/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">MSF:ILITIES/CENTOS_LINUX-CVE-2012-4558/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">MSF:ILITIES/CENTOS_LINUX-CVE-2012-3499/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">MSF:ILITIES/APACHE-HTTPD-CVE-2012-4558/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">MSF:ILITIES/APACHE-HTTPD-CVE-2012-3499/</elem>
+<elem key="type">metasploit</elem>
+<elem key="is_exploit">true</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">CVE-2016-4975</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">CVE-2013-1896</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">CVE-2012-4558</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="id">CVE-2012-3499</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">2.6</elem>
+<elem key="id">CVE-2012-2687</elem>
+<elem key="type">cve</elem>
+<elem key="is_exploit">false</elem>
+</table>
+</table>
+</script><script id="ssl-enum-ciphers" output="&#xa;  SSLv3: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - F&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - F&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - F&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - F&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - F&#xa;      TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 2048) - F&#xa;      TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - F&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - F&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - F&#xa;      TLS_ECDHE_RSA_WITH_RC4_128_SHA (secp256r1) - F&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - F&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      CBC-mode cipher in SSLv3 (CVE-2014-3566)&#xa;      Insecure certificate signature (SHA1), score capped at F&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - F&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - F&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - F&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - F&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - F&#xa;      TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 2048) - F&#xa;      TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - F&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - F&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - F&#xa;      TLS_ECDHE_RSA_WITH_RC4_128_SHA (secp256r1) - F&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - F&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      Insecure certificate signature (SHA1), score capped at F&#xa;  TLSv1.1: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - F&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - F&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - F&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - F&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - F&#xa;      TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 2048) - F&#xa;      TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - F&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - F&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - F&#xa;      TLS_ECDHE_RSA_WITH_RC4_128_SHA (secp256r1) - F&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - F&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      Insecure certificate signature (SHA1), score capped at F&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - F&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - F&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - F&#xa;      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - F&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - F&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - F&#xa;      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - F&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - F&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - F&#xa;      TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 2048) - F&#xa;      TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - F&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - F&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - F&#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - F&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - F&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - F&#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - F&#xa;      TLS_ECDHE_RSA_WITH_RC4_128_SHA (secp256r1) - F&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - F&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - F&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      Insecure certificate signature (SHA1), score capped at F&#xa;  least strength: F"><table key="SSLv3">
+<table key="ciphers">
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_RC4_128_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>CBC-mode cipher in SSLv3 (CVE-2014-3566)</elem>
+<elem>Insecure certificate signature (SHA1), score capped at F</elem>
+</table>
+</table>
+<table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_RC4_128_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>Insecure certificate signature (SHA1), score capped at F</elem>
+</table>
+</table>
+<table key="TLSv1.1">
+<table key="ciphers">
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_RC4_128_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>Insecure certificate signature (SHA1), score capped at F</elem>
+</table>
+</table>
+<table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA256</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="kex_info">dh 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_RC4_128_SHA</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA256</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>Insecure certificate signature (SHA1), score capped at F</elem>
+</table>
+</table>
+<elem key="least strength">F</elem>
+</script><script id="http-comments-displayer" output="Couldn&apos;t find any comments."/><script id="http-title" output="404 Not Found"><elem key="title">404 Not Found</elem>
+</script><script id="http-brute" output="  &#xa;  Path &quot;/&quot; does not require authentication"/></port>
+<port protocol="tcp" portid="993"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="imap" product="Dovecot imapd" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:dovecot:dovecot</cpe></service><script id="ssl-cert" output="Subject: commonName=localhost/organizationName=Dovecot mail server&#xa;Not valid before: 2015-10-08T20:57:30&#xa;Not valid after:  2025-10-07T20:57:30"><table key="subject">
+<elem key="commonName">localhost</elem>
+<elem key="emailAddress">root@mail.borntosec.net</elem>
+<elem key="organizationName">Dovecot mail server</elem>
+<elem key="organizationalUnitName">localhost</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">localhost</elem>
+<elem key="emailAddress">root@mail.borntosec.net</elem>
+<elem key="organizationName">Dovecot mail server</elem>
+<elem key="organizationalUnitName">localhost</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">CA633D0D88E9890D8D9A719048DFC3B5F1661AFEA0AC2ABDBE1473A0841F3AD8E33FF31BF1EC67F72034B81890B7AF11FD3E0C83E5898486A3BCA1B76F306F25B5199181BE1E7060145F266F010DCE62CB2B9AC901B100E2979A0C9CBF9F2356FAF892E1743F4C56E6F047C737C3175017076A8D2A0D61E6873A332D68C7A13C4C74B152B0B0CC6D9BE08F2A769880908FC6F8CCBC5399107D290BE4E9CA679675FA96372FD3F3A4D33A4499B1E777DF8BD8C19479D0F935533B3C7BDA7AB22A047F6ADE4FFCEE164B1C4CCED558E9DF1E8DA03431011C2231107535C5C829DF8F59875D11E91DA090EA256F91B2702662845955E370446821532293BCE7E213</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">0E:14:C7:00:2B:77:6B:C5:C2:79:20:B9:90:0E:94:8C:F4:D5:0A:AC</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">keyid:0E:14:C7:00:2B:77:6B:C5:C2:79:20:B9:90:0E:94:8C:F4:D5:0A:AC&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:TRUE</elem>
+</table>
+</table>
+<elem key="sig_algo">sha1WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2015-10-08T20:57:30</elem>
+<elem key="notAfter">2025-10-07T20:57:30</elem>
+</table>
+<elem key="md5">ea11cc28787e147ea72c8588e562e9b7</elem>
+<elem key="sha1">2d09d85fe5019a67413ec2d1623711dea91cafbe</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDrzCCApegAwIBAgIJAN968TzwGVlvMA0GCSqGSIb3DQEBBQUAMG4xHDAaBgNV&#xa;BAoME0RvdmVjb3QgbWFpbCBzZXJ2ZXIxEjAQBgNVBAsMCWxvY2FsaG9zdDESMBAG&#xa;A1UEAwwJbG9jYWxob3N0MSYwJAYJKoZIhvcNAQkBFhdyb290QG1haWwuYm9ybnRv&#xa;c2VjLm5ldDAeFw0xNTEwMDgyMDU3MzBaFw0yNTEwMDcyMDU3MzBaMG4xHDAaBgNV&#xa;BAoME0RvdmVjb3QgbWFpbCBzZXJ2ZXIxEjAQBgNVBAsMCWxvY2FsaG9zdDESMBAG&#xa;A1UEAwwJbG9jYWxob3N0MSYwJAYJKoZIhvcNAQkBFhdyb290QG1haWwuYm9ybnRv&#xa;c2VjLm5ldDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMpjPQ2I6YkN&#xa;jZpxkEjfw7XxZhr+oKwqvb4Uc6CEHzrY4z/zG/HsZ/cgNLgYkLevEf0+DIPliYSG&#xa;o7yht28wbyW1GZGBvh5wYBRfJm8BDc5iyyuayQGxAOKXmgycv58jVvr4kuF0P0xW&#xa;5vBHxzfDF1AXB2qNKg1h5oc6My1ox6E8THSxUrCwzG2b4I8qdpiAkI/G+My8U5kQ&#xa;fSkL5OnKZ5Z1+pY3L9PzpNM6RJmx53ffi9jBlHnQ+TVTOzx72nqyKgR/at5P/O4W&#xa;SxxMztVY6d8ejaA0MQEcIjEQdTXFyCnfj1mHXRHpHaCQ6iVvkbJwJmKEWVXjcERo&#xa;IVMik7zn4hMCAwEAAaNQME4wHQYDVR0OBBYEFA4UxwArd2vFwnkguZAOlIz01Qqs&#xa;MB8GA1UdIwQYMBaAFA4UxwArd2vFwnkguZAOlIz01QqsMAwGA1UdEwQFMAMBAf8w&#xa;DQYJKoZIhvcNAQEFBQADggEBAKuoOkJBTDFjE6a066CPXQ6ulE6siN1B+nw95NnO&#xa;N/RZrjEkEr24HAFJxn1zXgjEhlYToJgTNTCGLpOKr0weFEJcTiZLNuh7v++WLIM5&#xa;YBpwscnbxL+2ak9PLbGGVyq+RrX3RTzD5t6WZChwxCPqcNORB9pQknO9a7qG9kpl&#xa;0ljGwg/xYvY+tETYBSz88Wy053Dq+4on5tzkeLOxVi1WSA3XxdbQrS5kmfGCCIVi&#xa;Phl8QItIxBdZGoOY2niOszqDU4gaqKsx7wcIsDcKoXl2lNutwV8Eb/HLBo8KBXjr&#xa;u3axYWy9JvJQkowL0Z5oHss3a2J3ErljjQLUlUFR6sd+tz0=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-dh-params" output="&#xa;  VULNERABLE:&#xa;  Diffie-Hellman Key Exchange Insufficient Group Strength&#xa;    State: VULNERABLE&#xa;      Transport Layer Security (TLS) services that use Diffie-Hellman groups&#xa;      of insufficient strength, especially those using one of a few commonly&#xa;      shared groups, may be susceptible to passive eavesdropping attacks.&#xa;    Check results:&#xa;      WEAK DH GROUP 1&#xa;            Cipher Suite: TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA&#xa;            Modulus Type: Safe prime&#xa;            Modulus Source: Unknown/Custom-generated&#xa;            Modulus Length: 1024&#xa;            Generator Length: 8&#xa;            Public Key Length: 1024&#xa;    References:&#xa;      https://weakdh.org&#xa;"><table key="NMAP-30">
+<elem key="title">Diffie-Hellman Key Exchange Insufficient Group Strength</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="description">
+<elem>Transport Layer Security (TLS) services that use Diffie-Hellman groups&#xa;of insufficient strength, especially those using one of a few commonly&#xa;shared groups, may be susceptible to passive eavesdropping attacks.</elem>
+</table>
+<table key="check_results">
+<elem>WEAK DH GROUP 1&#xa;      Cipher Suite: TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA&#xa;      Modulus Type: Safe prime&#xa;      Modulus Source: Unknown/Custom-generated&#xa;      Modulus Length: 1024&#xa;      Generator Length: 8&#xa;      Public Key Length: 1024</elem>
+</table>
+<table key="refs">
+<elem>https://weakdh.org</elem>
+</table>
+</table>
+</script><script id="ssl-poodle" output="&#xa;  VULNERABLE:&#xa;  SSL POODLE information leak&#xa;    State: LIKELY VULNERABLE&#xa;    IDs:  BID:70574  CVE:CVE-2014-3566&#xa;          The SSL protocol 3.0, as used in OpenSSL through 1.0.1i and other&#xa;          products, uses nondeterministic CBC padding, which makes it easier&#xa;          for man-in-the-middle attackers to obtain cleartext data via a&#xa;          padding-oracle attack, aka the &quot;POODLE&quot; issue.&#xa;    Disclosure date: 2014-10-14&#xa;    Check results:&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA&#xa;      TLS_FALLBACK_SCSV properly implemented&#xa;    References:&#xa;      https://www.imperialviolet.org/2014/10/14/poodle.html&#xa;      https://www.securityfocus.com/bid/70574&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566&#xa;      https://www.openssl.org/~bodo/ssl-poodle.pdf&#xa;"><table key="CVE-2014-3566">
+<elem key="title">SSL POODLE information leak</elem>
+<elem key="state">LIKELY VULNERABLE</elem>
+<table key="ids">
+<elem>BID:70574</elem>
+<elem>CVE:CVE-2014-3566</elem>
+</table>
+<table key="description">
+<elem>    The SSL protocol 3.0, as used in OpenSSL through 1.0.1i and other&#xa;    products, uses nondeterministic CBC padding, which makes it easier&#xa;    for man-in-the-middle attackers to obtain cleartext data via a&#xa;    padding-oracle attack, aka the &quot;POODLE&quot; issue.</elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="day">14</elem>
+<elem key="month">10</elem>
+<elem key="year">2014</elem>
+</table>
+</table>
+<elem key="disclosure">2014-10-14</elem>
+<table key="check_results">
+<elem>TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem>TLS_FALLBACK_SCSV properly implemented</elem>
+</table>
+<table key="refs">
+<elem>https://www.imperialviolet.org/2014/10/14/poodle.html</elem>
+<elem>https://www.securityfocus.com/bid/70574</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566</elem>
+<elem>https://www.openssl.org/~bodo/ssl-poodle.pdf</elem>
+</table>
+</table>
+</script><script id="banner" output="* OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ...&#xa;"/><script id="imap-brute" output="&#xa;  Accounts: No valid accounts found&#xa;  Statistics: Performed 0 guesses in 1 seconds, average tps: 0.0&#xa;  ERROR: The service seems to have failed or is heavily firewalled..."><elem key="Accounts">No valid accounts found</elem>
+<elem key="Statistics">Performed 0 guesses in 1 seconds, average tps: 0.0</elem>
+<elem key="ERROR">The service seems to have failed or is heavily firewalled...</elem>
+</script><script id="imap-capabilities" output="LOGIN-REFERRALS ENABLE SASL-IR more ID IDLE have post-login AUTH=PLAINA0001 IMAP4rev1 listed capabilities OK LITERAL+ Pre-login"/><script id="ssl-enum-ciphers" output="&#xa;  SSLv3: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - F&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - F&#xa;      TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - F&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      CBC-mode cipher in SSLv3 (CVE-2014-3566)&#xa;      Ciphersuite uses MD5 for message integrity&#xa;      Insecure certificate signature (SHA1), score capped at F&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - F&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - F&#xa;      TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - F&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      Ciphersuite uses MD5 for message integrity&#xa;      Insecure certificate signature (SHA1), score capped at F&#xa;  TLSv1.1: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - F&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - F&#xa;      TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - F&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      Ciphersuite uses MD5 for message integrity&#xa;      Insecure certificate signature (SHA1), score capped at F&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - F&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - F&#xa;      TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - F&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - F&#xa;      TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - F&#xa;      TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - F&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      Ciphersuite uses MD5 for message integrity&#xa;      Insecure certificate signature (SHA1), score capped at F&#xa;  least strength: F"><table key="SSLv3">
+<table key="ciphers">
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_MD5</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>CBC-mode cipher in SSLv3 (CVE-2014-3566)</elem>
+<elem>Ciphersuite uses MD5 for message integrity</elem>
+<elem>Insecure certificate signature (SHA1), score capped at F</elem>
+</table>
+</table>
+<table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_MD5</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>Ciphersuite uses MD5 for message integrity</elem>
+<elem>Insecure certificate signature (SHA1), score capped at F</elem>
+</table>
+</table>
+<table key="TLSv1.1">
+<table key="ciphers">
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_MD5</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>Ciphersuite uses MD5 for message integrity</elem>
+<elem>Insecure certificate signature (SHA1), score capped at F</elem>
+</table>
+</table>
+<table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA256</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA256</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_MD5</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_SEED_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>Ciphersuite uses MD5 for message integrity</elem>
+<elem>Insecure certificate signature (SHA1), score capped at F</elem>
+</table>
+</table>
+<elem key="least strength">F</elem>
+</script><script id="unusual-port" output="imap unexpected on port tcp/993"/><script id="ssl-date" output="2022-06-17T04:01:12+00:00; 0s from scanner time."><elem key="delta">0.0</elem>
+<elem key="date">2022-06-17T04:01:12+00:00</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="21"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="34976"/>
+<osmatch name="Linux 3.2 - 3.16" accuracy="100" line="65145">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="10712" lastboot="Fri Jun 17 03:02:58 2022"/>
+<distance value="1"/>
+<tcpsequence index="256" difficulty="Good luck!" values="D3B7DB6F,71300BBE,E69E033B,1207177C,A581A386,F622F277"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="other" values="1A4B08,1A4B22,1A4B3F,1A4B58,1A4B72,1A4B8C"/>
+<hostscript><script id="qscan" output="&#xa;PORT  FAMILY  MEAN (us)  STDDEV  LOSS (%)&#xa;1     0       517.30     219.68  0.0%&#xa;21    0       701.20     384.65  0.0%&#xa;22    1       805.30     429.41  0.0%&#xa;80    1       977.30     406.57  0.0%&#xa;143   1       950.50     338.21  0.0%&#xa;443   1       833.00     360.26  0.0%&#xa;993   0       594.30     357.20  0.0%&#xa;"/><script id="fcrdns" output="FAIL (No PTR record)"><table key="&lt;none&gt;">
+<elem key="status">fail</elem>
+<elem key="reason">No PTR record</elem>
+</table>
+</script><script id="dns-blacklist" output="&#xa;  SPAM&#xa;    bl.spamcop.net - FAIL&#xa;    l2.apews.org - FAIL&#xa;    list.quorum.to - FAIL&#xa;    bl.nszones.com - FAIL&#xa;"/><script id="port-states" output="&#xa;  tcp: &#xa;    open: 21-22,80,143,443,993&#xa;    closed: 1-20,23-79,81-142,144-442,444-992,994-65535"><table key="tcp">
+<elem key="open">21-22,80,143,443,993</elem>
+<elem key="closed">1-20,23-79,81-142,144-442,444-992,994-65535</elem>
+</table>
+</script><script id="dns-brute" output="Can&apos;t guess domain of &quot;10.19.1.251&quot;; use dns-brute.domain script argument."/><script id="ipidseq" output="ERROR: Script execution failed (use -d to debug)"/><script id="path-mtu" output="PMTU == 1500"/><script id="traceroute-geolocation" output="&#xa;  HOP  RTT   ADDRESS      GEOLOCATION&#xa;  1    0.47  10.19.1.251  - ,- &#xa;"><table>
+<elem key="rtt">0.47</elem>
+<elem key="ip">10.19.1.251</elem>
+<elem key="hop">1</elem>
+</table>
+</script></hostscript><trace>
+<hop ttl="1" ipaddr="10.19.1.251" rtt="0.47"/>
+</trace>
+<times srtt="475" rttvar="69" to="100000"/>
+</host>
+<postscript><script id="reverse-index" output="&#xa;  21/tcp: 10.19.1.251&#xa;  22/tcp: 10.19.1.251&#xa;  80/tcp: 10.19.1.251&#xa;  143/tcp: 10.19.1.251&#xa;  443/tcp: 10.19.1.251&#xa;  993/tcp: 10.19.1.251"><table key="21/tcp">
+<elem>10.19.1.251</elem>
+</table>
+<table key="22/tcp">
+<elem>10.19.1.251</elem>
+</table>
+<table key="80/tcp">
+<elem>10.19.1.251</elem>
+</table>
+<table key="143/tcp">
+<elem>10.19.1.251</elem>
+</table>
+<table key="443/tcp">
+<elem>10.19.1.251</elem>
+</table>
+<table key="993/tcp">
+<elem>10.19.1.251</elem>
+</table>
+</script></postscript><runstats><finished time="1655438490" timestr="Fri Jun 17 06:01:30 2022" summary="Nmap done at Fri Jun 17 06:01:30 2022; 1 IP address (1 host up) scanned in 3936.40 seconds" elapsed="3936.40" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,1205 @@
+# Nmap 7.92 scan initiated Fri Jun 17 04:55:54 2022 as: nmap -p- -A -T 4 -sV -O -oN shared/dumps/nmap_scan_norm -oX shared/dumps/nmap_scan_xml --script=all 10.19.1.251
+Pre-scan script results:
+| targets-ipv6-multicast-mld: 
+|   IP: fe80::183c:aea2:ff92:996f  MAC: 98:9e:63:26:a2:dc  IFACE: eth0
+|   IP: fe80::1c0b:a020:4cc9:8668  MAC: 98:9e:63:29:00:80  IFACE: eth0
+|   IP: fe80::1cb9:aa72:724c:1888  MAC: 98:9e:63:25:aa:6a  IFACE: eth0
+|   IP: fe80::437:7814:607e:f57e   MAC: 98:9e:63:29:af:ae  IFACE: eth0
+|   IP: fe80::4db:9375:873d:4004   MAC: 98:9e:63:40:4d:18  IFACE: eth0
+|   IP: fe80::a00:27ff:fec7:5011   MAC: 08:00:27:c7:50:11  IFACE: eth0
+| 
+|_  Use --script-args=newtargets to add the results as targets
+|_eap-info: please specify an interface with -e
+|_http-robtex-shared-ns: *TEMPORARILY DISABLED* due to changes in Robtex's API. See https://www.robtex.com/api/
+| broadcast-dns-service-discovery: 
+|   224.0.0.251
+|     9/tcp workstation
+|       Address=10.19.1.66 fe80::108c:6019:aabc:1b06
+|     9/tcp workstation
+|       Address=10.19.1.23 fe80::1c83:9caf:737f:137
+|     9/tcp workstation
+|       Address=10.19.1.214 fe80::1c18:cd3:3c9c:5d1f
+|     9/tcp workstation
+|       Address=10.19.1.123 fe80::18ca:ffd4:34f9:b140
+|     9/tcp workstation
+|       Address=10.19.1.103 fe80::883:5e0d:9ac4:3564
+|     9/tcp workstation
+|       Address=10.19.1.238 fe80::437:fa85:a35c:9be4
+|     9/tcp workstation
+|       Address=10.19.1.18 fe80::437:7814:607e:f57e
+|     9/tcp workstation
+|       Address=10.19.1.33 fe80::1c6b:95d9:543:b1a
+|     9/tcp workstation
+|       Address=10.19.1.100 fe80::4db:9375:873d:4004
+|     9/tcp workstation
+|       Address=10.19.1.245 fe80::183c:aea2:ff92:996f
+|     9/tcp workstation
+|       Address=10.19.1.80 fe80::cf5:1c4a:5587:204d
+|     9/tcp workstation
+|       Address=10.19.1.48 fe80::1c71:b594:6abd:5a8c
+|     9/tcp workstation
+|       Address=10.19.1.42 fe80::1ce2:1e58:2038:cb1e
+|     9/tcp workstation
+|       Address=10.19.1.130 fe80::cfb:9d3b:73a6:1530
+|     9/tcp workstation
+|       Address=10.19.1.44 fe80::1c0b:a020:4cc9:8668
+|     9/tcp workstation
+|       Address=10.19.1.65 fe80::cc:68ea:c0a6:8116
+|     9/tcp workstation
+|       Address=10.19.1.209 fe80::82b:e26:b7a7:e2e7
+|     9/tcp workstation
+|       Address=10.19.1.109 fe80::453:e66d:b215:48fa
+|     9/tcp workstation
+|       Address=10.19.1.162 fe80::ca0:29b2:2a29:4167
+|     9/tcp workstation
+|       Address=10.19.1.93 fe80::86b:fd18:1871:9c6a
+|     9/tcp workstation
+|       Address=10.19.1.200 fe80::474:575e:248d:8fb0
+|     9/tcp workstation
+|       Address=10.19.1.191 fe80::1cb9:aa72:724c:1888
+|     9/tcp workstation
+|       Address=10.19.1.142 fe80::1cf0:10fc:ae15:1188
+|     22/tcp sftp-ssh
+|       Address=10.19.1.66 fe80::108c:6019:aabc:1b06
+|     22/tcp sftp-ssh
+|       Address=10.19.1.42 fe80::1ce2:1e58:2038:cb1e
+|     22/tcp sftp-ssh
+|       Address=10.19.1.162 fe80::ca0:29b2:2a29:4167
+|     22/tcp sftp-ssh
+|       Address=10.19.1.103 fe80::883:5e0d:9ac4:3564
+|     22/tcp sftp-ssh
+|       Address=10.19.1.200 fe80::474:575e:248d:8fb0
+|     22/tcp sftp-ssh
+|       Address=10.19.1.123 fe80::18ca:ffd4:34f9:b140
+|     22/tcp sftp-ssh
+|       Address=10.19.1.245 fe80::183c:aea2:ff92:996f
+|     22/tcp sftp-ssh
+|       Address=10.19.1.65 fe80::cc:68ea:c0a6:8116
+|     22/tcp sftp-ssh
+|       Address=10.19.1.33 fe80::1c6b:95d9:543:b1a
+|     22/tcp sftp-ssh
+|       Address=10.19.1.44 fe80::1c0b:a020:4cc9:8668
+|     22/tcp sftp-ssh
+|       Address=10.19.1.18 fe80::437:7814:607e:f57e
+|     22/tcp sftp-ssh
+|       Address=10.19.1.209 fe80::82b:e26:b7a7:e2e7
+|     22/tcp sftp-ssh
+|       Address=10.19.1.80 fe80::cf5:1c4a:5587:204d
+|     22/tcp sftp-ssh
+|       Address=10.19.1.214 fe80::1c18:cd3:3c9c:5d1f
+|     22/tcp sftp-ssh
+|       Address=10.19.1.130 fe80::cfb:9d3b:73a6:1530
+|     22/tcp sftp-ssh
+|       Address=10.19.1.191 fe80::1cb9:aa72:724c:1888
+|     22/tcp sftp-ssh
+|       Address=10.19.1.48 fe80::1c71:b594:6abd:5a8c
+|     22/tcp sftp-ssh
+|       Address=10.19.1.142 fe80::1cf0:10fc:ae15:1188
+|     22/tcp sftp-ssh
+|       Address=10.19.1.23 fe80::1c83:9caf:737f:137
+|     22/tcp sftp-ssh
+|       Address=10.19.1.238 fe80::437:fa85:a35c:9be4
+|     22/tcp sftp-ssh
+|       Address=10.19.1.93 fe80::86b:fd18:1871:9c6a
+|     22/tcp sftp-ssh
+|       Address=10.19.1.100 fe80::4db:9375:873d:4004
+|     22/tcp sftp-ssh
+|       Address=10.19.1.109 fe80::453:e66d:b215:48fa
+|     22/tcp ssh
+|       Address=10.19.1.103 fe80::883:5e0d:9ac4:3564
+|     22/tcp ssh
+|       Address=10.19.1.23 fe80::1c83:9caf:737f:137
+|     22/tcp ssh
+|       Address=10.19.1.33 fe80::1c6b:95d9:543:b1a
+|     22/tcp ssh
+|       Address=10.19.1.48 fe80::1c71:b594:6abd:5a8c
+|     22/tcp ssh
+|       Address=10.19.1.162 fe80::ca0:29b2:2a29:4167
+|     22/tcp ssh
+|       Address=10.19.1.238 fe80::437:fa85:a35c:9be4
+|     22/tcp ssh
+|       Address=10.19.1.44 fe80::1c0b:a020:4cc9:8668
+|     22/tcp ssh
+|       Address=10.19.1.100 fe80::4db:9375:873d:4004
+|     22/tcp ssh
+|       Address=10.19.1.191 fe80::1cb9:aa72:724c:1888
+|     22/tcp ssh
+|       Address=10.19.1.245 fe80::183c:aea2:ff92:996f
+|     22/tcp ssh
+|       Address=10.19.1.65 fe80::cc:68ea:c0a6:8116
+|     22/tcp ssh
+|       Address=10.19.1.18 fe80::437:7814:607e:f57e
+|     22/tcp ssh
+|       Address=10.19.1.93 fe80::86b:fd18:1871:9c6a
+|     22/tcp ssh
+|       Address=10.19.1.142 fe80::1cf0:10fc:ae15:1188
+|     22/tcp ssh
+|       Address=10.19.1.109 fe80::453:e66d:b215:48fa
+|     22/tcp ssh
+|       Address=10.19.1.42 fe80::1ce2:1e58:2038:cb1e
+|     22/tcp ssh
+|       Address=10.19.1.214 fe80::1c18:cd3:3c9c:5d1f
+|     22/tcp ssh
+|       Address=10.19.1.80 fe80::cf5:1c4a:5587:204d
+|     22/tcp ssh
+|       Address=10.19.1.123 fe80::18ca:ffd4:34f9:b140
+|     22/tcp ssh
+|       Address=10.19.1.200 fe80::474:575e:248d:8fb0
+|     22/tcp ssh
+|       Address=10.19.1.130 fe80::cfb:9d3b:73a6:1530
+|     22/tcp ssh
+|       Address=10.19.1.209 fe80::82b:e26:b7a7:e2e7
+|     22/tcp ssh
+|       Address=10.19.1.66 fe80::108c:6019:aabc:1b06
+|     3283/udp net-assistant
+|       Address=10.19.1.18 fe80::437:7814:607e:f57e
+|     3283/udp net-assistant
+|       Address=10.19.1.162 fe80::ca0:29b2:2a29:4167
+|     3283/udp net-assistant
+|       Address=10.19.1.123 fe80::18ca:ffd4:34f9:b140
+|     3283/udp net-assistant
+|       Address=10.19.1.66 fe80::108c:6019:aabc:1b06
+|     3283/udp net-assistant
+|       Address=10.19.1.200 fe80::474:575e:248d:8fb0
+|     3283/udp net-assistant
+|       Address=10.19.1.245 fe80::183c:aea2:ff92:996f
+|     3283/udp net-assistant
+|       Address=10.19.1.109 fe80::453:e66d:b215:48fa
+|     3283/udp net-assistant
+|       Address=10.19.1.209 fe80::82b:e26:b7a7:e2e7
+|     3283/udp net-assistant
+|       Address=10.19.1.214 fe80::1c18:cd3:3c9c:5d1f
+|     3283/udp net-assistant
+|       Address=10.19.1.130 fe80::cfb:9d3b:73a6:1530
+|     3283/udp net-assistant
+|       Address=10.19.1.100 fe80::4db:9375:873d:4004
+|     3283/udp net-assistant
+|       Address=10.19.1.191 fe80::1cb9:aa72:724c:1888
+|     3283/udp net-assistant
+|       Address=10.19.1.80 fe80::cf5:1c4a:5587:204d
+|     3283/udp net-assistant
+|       Address=10.19.1.142 fe80::1cf0:10fc:ae15:1188
+|     3283/udp net-assistant
+|       Address=10.19.1.23 fe80::1c83:9caf:737f:137
+|     3283/udp net-assistant
+|       Address=10.19.1.238 fe80::437:fa85:a35c:9be4
+|     3283/udp net-assistant
+|       Address=10.19.1.33 fe80::1c6b:95d9:543:b1a
+|     3283/udp net-assistant
+|       Address=10.19.1.44 fe80::1c0b:a020:4cc9:8668
+|     3283/udp net-assistant
+|       Address=10.19.1.103 fe80::883:5e0d:9ac4:3564
+|     5900/tcp rfb
+|       Address=10.19.1.209 fe80::82b:e26:b7a7:e2e7
+|     5900/tcp rfb
+|       Address=10.19.1.200 fe80::474:575e:248d:8fb0
+|     5900/tcp rfb
+|       Address=10.19.1.245 fe80::183c:aea2:ff92:996f
+|     5900/tcp rfb
+|       Address=10.19.1.238 fe80::437:fa85:a35c:9be4
+|     5900/tcp rfb
+|       Address=10.19.1.130 fe80::cfb:9d3b:73a6:1530
+|     5900/tcp rfb
+|       Address=10.19.1.142 fe80::1cf0:10fc:ae15:1188
+|     5900/tcp rfb
+|       Address=10.19.1.44 fe80::1c0b:a020:4cc9:8668
+|     5900/tcp rfb
+|       Address=10.19.1.123 fe80::18ca:ffd4:34f9:b140
+|     5900/tcp rfb
+|       Address=10.19.1.191 fe80::1cb9:aa72:724c:1888
+|     5900/tcp rfb
+|       Address=10.19.1.33 fe80::1c6b:95d9:543:b1a
+|     5900/tcp rfb
+|       Address=10.19.1.80 fe80::cf5:1c4a:5587:204d
+|     5900/tcp rfb
+|       Address=10.19.1.103 fe80::883:5e0d:9ac4:3564
+|     5900/tcp rfb
+|       Address=10.19.1.100 fe80::4db:9375:873d:4004
+|     5900/tcp rfb
+|       Address=10.19.1.18 fe80::437:7814:607e:f57e
+|     5900/tcp rfb
+|       Address=10.19.1.23 fe80::1c83:9caf:737f:137
+|     5900/tcp rfb
+|       Address=10.19.1.214 fe80::1c18:cd3:3c9c:5d1f
+|     5900/tcp rfb
+|_      Address=10.19.1.66 fe80::108c:6019:aabc:1b06
+| broadcast-dhcp-discover: 
+|   Response 1 of 1: 
+|     Interface: eth0
+|     IP Offered: 10.19.1.70
+|     Server Identifier: 10.51.1.4
+|     Subnet Mask: 255.255.255.0
+|     Router: 10.19.1.254
+|     Domain Name Server: 10.51.1.5
+|     Domain Name: 42lyon.fr
+|_    Broadcast Address: 10.19.1.255
+| targets-ipv6-multicast-invalid-dst: 
+|   IP: fe80::a00:27ff:fec7:5011   MAC: 08:00:27:c7:50:11  IFACE: eth0
+|   IP: fe80::1c0b:a020:4cc9:8668  MAC: 98:9e:63:29:00:80  IFACE: eth0
+|   IP: fe80::183c:aea2:ff92:996f  MAC: 98:9e:63:26:a2:dc  IFACE: eth0
+|   IP: fe80::437:7814:607e:f57e   MAC: 98:9e:63:29:af:ae  IFACE: eth0
+|   IP: fe80::1cb9:aa72:724c:1888  MAC: 98:9e:63:25:aa:6a  IFACE: eth0
+|   IP: fe80::4db:9375:873d:4004   MAC: 98:9e:63:40:4d:18  IFACE: eth0
+|   IP: fe80::1c83:9caf:737f:137   MAC: 98:9e:63:40:88:6a  IFACE: eth0
+|   IP: fe80::1a65:71ff:fef1:2e    MAC: 18:65:71:f1:00:2e  IFACE: eth0
+|   IP: fe80::1c6b:95d9:543:b1a    MAC: 98:9e:63:40:4c:ee  IFACE: eth0
+|   IP: fe80::437:fa85:a35c:9be4   MAC: 98:9e:63:29:ae:f6  IFACE: eth0
+|   IP: fe80::474:575e:248d:8fb0   MAC: 98:9e:63:40:88:5e  IFACE: eth0
+|   IP: fe80::1cf0:10fc:ae15:1188  MAC: 98:9e:63:29:0a:fe  IFACE: eth0
+|   IP: fe80::1ce2:1e58:2038:cb1e  MAC: 98:9e:63:29:04:d0  IFACE: eth0
+|   IP: fe80::453:e66d:b215:48fa   MAC: 98:9e:63:29:02:78  IFACE: eth0
+|   IP: fe80::82b:e26:b7a7:e2e7    MAC: 98:9e:63:28:fe:4a  IFACE: eth0
+|   IP: fe80::ca0:29b2:2a29:4167   MAC: 98:9e:63:27:b6:f6  IFACE: eth0
+|   IP: fe80::1c71:b594:6abd:5a8c  MAC: 98:9e:63:29:04:12  IFACE: eth0
+|   IP: fe80::108c:6019:aabc:1b06  MAC: 98:9e:63:40:56:54  IFACE: eth0
+|   IP: fe80::18ca:ffd4:34f9:b140  MAC: 98:9e:63:25:aa:30  IFACE: eth0
+|   IP: fe80::cf5:1c4a:5587:204d   MAC: 98:9e:63:29:a6:fa  IFACE: eth0
+|   IP: fe80::cc:68ea:c0a6:8116    MAC: 98:9e:63:28:fe:62  IFACE: eth0
+|   IP: fe80::86b:fd18:1871:9c6a   MAC: 98:9e:63:29:00:6a  IFACE: eth0
+|   IP: fe80::1c18:cd3:3c9c:5d1f   MAC: 98:9e:63:40:56:3a  IFACE: eth0
+|   IP: fe80::883:5e0d:9ac4:3564   MAC: 98:9e:63:27:b4:5a  IFACE: eth0
+|   IP: fe80::62:1d08:508:ccc8     MAC: dc:a6:32:7f:80:32  IFACE: eth0
+|   IP: fe80::585a:d6ff:feae:50f3  MAC: 5a:5a:d6:ae:50:f3  IFACE: eth0
+|   IP: fe80::cfb:9d3b:73a6:1530   MAC: 98:9e:63:40:4d:68  IFACE: eth0
+|_  Use --script-args=newtargets to add the results as targets
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+| broadcast-ping: 
+|   IP: 10.19.1.123  MAC: 98:9e:63:25:aa:30
+|   IP: 10.19.1.18   MAC: 98:9e:63:29:af:ae
+|   IP: 10.19.1.191  MAC: 98:9e:63:25:aa:6a
+|   IP: 10.19.1.142  MAC: 98:9e:63:29:0a:fe
+|   IP: 10.19.1.109  MAC: 98:9e:63:29:02:78
+|   IP: 10.19.1.162  MAC: 98:9e:63:27:b6:f6
+|   IP: 10.19.1.65   MAC: 98:9e:63:28:fe:62
+|   IP: 10.19.1.93   MAC: 98:9e:63:29:00:6a
+|   IP: 10.19.1.80   MAC: 98:9e:63:29:a6:fa
+|   IP: 10.19.1.48   MAC: 98:9e:63:29:04:12
+|   IP: 10.19.1.44   MAC: 98:9e:63:29:00:80
+|   IP: 10.19.1.103  MAC: 98:9e:63:27:b4:5a
+|   IP: 10.19.1.238  MAC: 98:9e:63:29:ae:f6
+|   IP: 10.19.1.100  MAC: 98:9e:63:40:4d:18
+|   IP: 10.19.1.66   MAC: 98:9e:63:40:56:54
+|   IP: 10.19.1.214  MAC: 98:9e:63:40:56:3a
+|   IP: 10.19.1.200  MAC: 98:9e:63:40:88:5e
+|   IP: 10.19.1.42   MAC: 98:9e:63:29:04:d0
+|   IP: 10.19.1.130  MAC: 98:9e:63:40:4d:68
+|   IP: 10.19.1.23   MAC: 98:9e:63:40:88:6a
+|   IP: 10.19.1.209  MAC: 98:9e:63:28:fe:4a
+|   IP: 10.19.1.245  MAC: 98:9e:63:26:a2:dc
+|   IP: 10.19.1.33   MAC: 98:9e:63:40:4c:ee
+|_  Use --script-args=newtargets to add the results as targets
+| broadcast-listener: 
+|   ether
+|       ARP Request
+|         sender ip    sender mac         target ip
+|         10.19.1.251  08:00:27:c7:50:11  10.19.1.254
+|   udp
+|       DHCP
+|         srv ip       cli ip      mask           gw           dns        vendor
+|         10.19.1.254  10.19.1.31  255.255.255.0  10.19.1.254  10.51.1.5  -
+|         10.19.1.254  10.19.1.70  255.255.255.0  10.19.1.254  10.51.1.5  -
+|       MDNS
+|         Generic
+|           ip           ipv6                       name
+|           10.19.1.103  fe80::883:5e0d:9ac4:3564   z2r1p2._device-info._tcp.local
+|           10.19.1.65   fe80::883:5e0d:9ac4:3564   _services._dns-sd._udp.local
+|           10.19.1.65   fe80::cc:68ea:c0a6:8116    _ssh._tcp.local
+|           10.19.1.162  fe80::cfb:9d3b:73a6:1530   _workstation._tcp.local
+|           10.19.1.123  fe80::18ca:ffd4:34f9:b140  z2r10p6._device-info._tcp.local
+|           10.19.1.109  fe80::453:e66d:b215:48fa   z2r5p2._device-info._tcp.local
+|       Spotify
+|         ip
+|         10.19.1.241
+|       Netbios
+|         Query
+|           ip           query
+|           10.19.1.80   
+|           10.19.1.44   
+|_          10.19.1.123  
+| targets-asn: 
+|_  targets-asn.asn is a mandatory parameter
+| ipv6-multicast-mld-list: 
+|   fe80::a00:27ff:fec7:5011: 
+|     device: eth0
+|     mac: 08:00:27:c7:50:11
+|     multicast_ips: 
+|       ff02::1:ffc7:5011         (NDP Solicited-node)
+|   fe80::1c0b:a020:4cc9:8668: 
+|     device: eth0
+|     mac: 98:9e:63:29:00:80
+|     multicast_ips: 
+|       ff02::fb                  (mDNSv6)
+|   fe80::4db:9375:873d:4004: 
+|     device: eth0
+|     mac: 98:9e:63:40:4d:18
+|     multicast_ips: 
+|       ff02::fb                  (mDNSv6)
+|       ff02::2:ffbe:6bd6         (Node Information Queries)
+|       ff02::1:ff3d:4004         (NDP Solicited-node)
+|   fe80::1cb9:aa72:724c:1888: 
+|     device: eth0
+|     mac: 98:9e:63:25:aa:6a
+|     multicast_ips: 
+|       ff02::fb                  (mDNSv6)
+|       ff02::2:ff6f:46be         (Node Information Queries)
+|       ff02::1:ff4c:1888         (NDP Solicited-node)
+|   fe80::183c:aea2:ff92:996f: 
+|     device: eth0
+|     mac: 98:9e:63:26:a2:dc
+|     multicast_ips: 
+|       ff02::fb                  (mDNSv6)
+|       ff02::2:ffbe:6bd6         (Node Information Queries)
+|       ff02::1:ff92:996f         (NDP Solicited-node)
+|   fe80::437:7814:607e:f57e: 
+|     device: eth0
+|     mac: 98:9e:63:29:af:ae
+|     multicast_ips: 
+|       ff02::fb                  (mDNSv6)
+|       ff02::2:ff6f:46be         (Node Information Queries)
+|_      ff02::1:ff7e:f57e         (NDP Solicited-node)
+| targets-ipv6-multicast-echo: 
+|   IP: fe80::a00:27ff:fec7:5011   MAC: 08:00:27:c7:50:11  IFACE: eth0
+|   IP: fe80::1c0b:a020:4cc9:8668  MAC: 98:9e:63:29:00:80  IFACE: eth0
+|   IP: fe80::1cb9:aa72:724c:1888  MAC: 98:9e:63:25:aa:6a  IFACE: eth0
+|   IP: fe80::4db:9375:873d:4004   MAC: 98:9e:63:40:4d:18  IFACE: eth0
+|   IP: fe80::183c:aea2:ff92:996f  MAC: 98:9e:63:26:a2:dc  IFACE: eth0
+|   IP: fe80::437:7814:607e:f57e   MAC: 98:9e:63:29:af:ae  IFACE: eth0
+|   IP: fe80::1cf0:10fc:ae15:1188  MAC: 98:9e:63:29:0a:fe  IFACE: eth0
+|   IP: fe80::474:575e:248d:8fb0   MAC: 98:9e:63:40:88:5e  IFACE: eth0
+|   IP: fe80::1ce2:1e58:2038:cb1e  MAC: 98:9e:63:29:04:d0  IFACE: eth0
+|   IP: fe80::82b:e26:b7a7:e2e7    MAC: 98:9e:63:28:fe:4a  IFACE: eth0
+|   IP: fe80::ca0:29b2:2a29:4167   MAC: 98:9e:63:27:b6:f6  IFACE: eth0
+|   IP: fe80::453:e66d:b215:48fa   MAC: 98:9e:63:29:02:78  IFACE: eth0
+|   IP: fe80::437:fa85:a35c:9be4   MAC: 98:9e:63:29:ae:f6  IFACE: eth0
+|   IP: fe80::1c83:9caf:737f:137   MAC: 98:9e:63:40:88:6a  IFACE: eth0
+|   IP: fe80::883:5e0d:9ac4:3564   MAC: 98:9e:63:27:b4:5a  IFACE: eth0
+|   IP: fe80::1c6b:95d9:543:b1a    MAC: 98:9e:63:40:4c:ee  IFACE: eth0
+|   IP: fe80::cf5:1c4a:5587:204d   MAC: 98:9e:63:29:a6:fa  IFACE: eth0
+|   IP: fe80::1c71:b594:6abd:5a8c  MAC: 98:9e:63:29:04:12  IFACE: eth0
+|   IP: fe80::108c:6019:aabc:1b06  MAC: 98:9e:63:40:56:54  IFACE: eth0
+|   IP: fe80::86b:fd18:1871:9c6a   MAC: 98:9e:63:29:00:6a  IFACE: eth0
+|   IP: fe80::18ca:ffd4:34f9:b140  MAC: 98:9e:63:25:aa:30  IFACE: eth0
+|   IP: fe80::1c18:cd3:3c9c:5d1f   MAC: 98:9e:63:40:56:3a  IFACE: eth0
+|   IP: fe80::cc:68ea:c0a6:8116    MAC: 98:9e:63:28:fe:62  IFACE: eth0
+|   IP: fe80::62:1d08:508:ccc8     MAC: dc:a6:32:7f:80:32  IFACE: eth0
+|   IP: fe80::585a:d6ff:feae:50f3  MAC: 5a:5a:d6:ae:50:f3  IFACE: eth0
+|_  Use --script-args=newtargets to add the results as targets
+|_hostmap-robtex: *TEMPORARILY DISABLED* due to changes in Robtex's API. See https://www.robtex.com/api/
+Nmap scan report for 10.19.1.251
+Host is up (0.00047s latency).
+Not shown: 65529 closed tcp ports (reset)
+Bug in http-security-headers: no string output.
+PORT    STATE SERVICE  VERSION
+21/tcp  open  ftp      vsftpd 2.0.8 or later
+|_ftp-anon: got code 500 "OOPS: vsftpd: refusing to run with writable root inside chroot()".
+|_banner: 220 Welcome on this server
+| ftp-brute: 
+|   Accounts: No valid accounts found
+|   Statistics: Performed 0 guesses in 1 seconds, average tps: 0.0
+|_  ERROR: The service seems to have failed or is heavily firewalled...
+22/tcp  open  ssh      OpenSSH 5.9p1 Debian 5ubuntu1.7 (Ubuntu Linux; protocol 2.0)
+|_ssh-run: Failed to specify credentials and command to run.
+| ssh-auth-methods: 
+|   Supported authentication methods: 
+|     publickey
+|_    password
+| vulners: 
+|   cpe:/a:openbsd:openssh:5.9p1: 
+|     	SSV:60656	5.0	https://vulners.com/seebug/SSV:60656	*EXPLOIT*
+|     	CVE-2018-15919	5.0	https://vulners.com/cve/CVE-2018-15919
+|     	CVE-2017-15906	5.0	https://vulners.com/cve/CVE-2017-15906
+|     	CVE-2010-5107	5.0	https://vulners.com/cve/CVE-2010-5107
+|     	SSV:90447	4.6	https://vulners.com/seebug/SSV:90447	*EXPLOIT*
+|     	CVE-2016-0778	4.6	https://vulners.com/cve/CVE-2016-0778
+|     	MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/	*EXPLOIT*
+|     	MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/	*EXPLOIT*
+|     	CVE-2020-14145	4.3	https://vulners.com/cve/CVE-2020-14145
+|     	MSF:ILITIES/UBUNTU-CVE-2016-0777/	4.0	https://vulners.com/metasploit/MSF:ILITIES/UBUNTU-CVE-2016-0777/	*EXPLOIT*
+|     	MSF:ILITIES/IBM-AIX-CVE-2016-0777/	4.0	https://vulners.com/metasploit/MSF:ILITIES/IBM-AIX-CVE-2016-0777/	*EXPLOIT*
+|     	MSF:ILITIES/DEBIAN-CVE-2016-0777/	4.0	https://vulners.com/metasploit/MSF:ILITIES/DEBIAN-CVE-2016-0777/	*EXPLOIT*
+|     	MSF:ILITIES/AIX-7.2-OPENSSH_ADVISORY7_CVE-2016-0777/	4.0	https://vulners.com/metasploit/MSF:ILITIES/AIX-7.2-OPENSSH_ADVISORY7_CVE-2016-0777/	*EXPLOIT*
+|     	MSF:ILITIES/AIX-7.1-OPENSSH_ADVISORY7_CVE-2016-0777/	4.0	https://vulners.com/metasploit/MSF:ILITIES/AIX-7.1-OPENSSH_ADVISORY7_CVE-2016-0777/	*EXPLOIT*
+|     	MSF:ILITIES/AIX-5.3-OPENSSH_ADVISORY7_CVE-2016-0777/	4.0	https://vulners.com/metasploit/MSF:ILITIES/AIX-5.3-OPENSSH_ADVISORY7_CVE-2016-0777/	*EXPLOIT*
+|_    	CVE-2016-0777	4.0	https://vulners.com/cve/CVE-2016-0777
+| ssh-hostkey: 
+|   1024 07:bf:02:20:f0:8a:c8:48:1e:fc:41:ae:a4:46:fa:25 (DSA)
+|   2048 26:dd:80:a3:df:c4:4b:53:1e:53:42:46:ef:6e:30:b2 (RSA)
+|_  256 cf:c3:8c:31:d7:47:7c:84:e2:d2:16:31:b2:8e:63:a7 (ECDSA)
+| ssh2-enum-algos: 
+|   kex_algorithms: (7)
+|   server_host_key_algorithms: (3)
+|   encryption_algorithms: (13)
+|   mac_algorithms: (11)
+|_  compression_algorithms: (2)
+| ssh-publickey-acceptance: 
+|_  Accepted Public Keys: No public keys accepted
+|_banner: SSH-2.0-OpenSSH_5.9p1 Debian-5ubuntu1.7
+| ssh-brute: 
+|   Accounts: No valid accounts found
+|_  Statistics: Performed 12 guesses in 1817 seconds, average tps: 0.1
+80/tcp  open  http     Apache httpd 2.2.22 ((Ubuntu))
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-config-backup: ERROR: Script execution failed (use -d to debug)
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.19.1.251
+|     
+|     Path: http://10.19.1.251:80/style.css
+|     Line number: 1
+|     Comment: 
+|         
+|         
+|         ***************************************************/
+|     
+|     Path: http://10.19.1.251:80/style.css
+|     Line number: 30
+|     Comment: 
+|         
+|         
+|_        ***************************************************/
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-brute:   
+|_  Path "/" does not require authentication
+|_http-server-header: Apache/2.2.22 (Ubuntu)
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-mobileversion-checker: No mobile version detected.
+|_http-xssed: No previously reported XSS vuln.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-chrono: Request times for /; avg: 20958.62ms; min: 190.11ms; max: 103653.71ms
+|_http-fetch: Please enter the complete path of the directory to save data in.
+|_http-errors: Couldn't find any error pages.
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1; css: 1; png: 2
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    Other: 1; css: 1; png: 2
+|_citrix-brute-xml: FAILED: No domain specified (use ntdomain argument)
+| http-headers: 
+|   Date: Fri, 17 Jun 2022 03:28:57 GMT
+|   Server: Apache/2.2.22 (Ubuntu)
+|   Last-Modified: Wed, 07 Oct 2015 23:37:54 GMT
+|   ETag: "3552-401-5218c3c475880"
+|   Accept-Ranges: bytes
+|   Content-Length: 1025
+|   Vary: Accept-Encoding
+|   Connection: close
+|   Content-Type: text/html
+|   
+|_  (Request type: GET)
+|_http-date: Fri, 17 Jun 2022 03:28:52 GMT; 0s from local time.
+| vulners: 
+|   cpe:/a:apache:http_server:2.2.22: 
+|     	SSV:60913	7.5	https://vulners.com/seebug/SSV:60913	*EXPLOIT*
+|     	CVE-2017-7679	7.5	https://vulners.com/cve/CVE-2017-7679
+|     	CVE-2017-3169	7.5	https://vulners.com/cve/CVE-2017-3169
+|     	CVE-2017-3167	7.5	https://vulners.com/cve/CVE-2017-3167
+|     	CVE-2013-2249	7.5	https://vulners.com/cve/CVE-2013-2249
+|     	MSF:ILITIES/UBUNTU-CVE-2018-1312/	6.8	https://vulners.com/metasploit/MSF:ILITIES/UBUNTU-CVE-2018-1312/	*EXPLOIT*
+|     	MSF:ILITIES/LINUXRPM-RHSA-2013-1012/	6.8	https://vulners.com/metasploit/MSF:ILITIES/LINUXRPM-RHSA-2013-1012/	*EXPLOIT*
+|     	MSF:ILITIES/LINUXRPM-RHSA-2013-1011/	6.8	https://vulners.com/metasploit/MSF:ILITIES/LINUXRPM-RHSA-2013-1011/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2018-1312/	6.8	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2018-1312/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2018-1312/	6.8	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2018-1312/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP1-CVE-2018-1312/	6.8	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP1-CVE-2018-1312/	*EXPLOIT*
+|     	MSF:ILITIES/CENTOS_LINUX-CVE-2017-17790/	6.8	https://vulners.com/metasploit/MSF:ILITIES/CENTOS_LINUX-CVE-2017-17790/	*EXPLOIT*
+|     	MSF:ILITIES/ALPINE-LINUX-CVE-2018-1312/	6.8	https://vulners.com/metasploit/MSF:ILITIES/ALPINE-LINUX-CVE-2018-1312/	*EXPLOIT*
+|     	CVE-2018-1312	6.8	https://vulners.com/cve/CVE-2018-1312
+|     	CVE-2017-9788	6.4	https://vulners.com/cve/CVE-2017-9788
+|     	MSF:ILITIES/LINUXRPM-RHSA-2013-1208/	5.4	https://vulners.com/metasploit/MSF:ILITIES/LINUXRPM-RHSA-2013-1208/	*EXPLOIT*
+|     	MSF:ILITIES/LINUXRPM-RHSA-2013-1207/	5.4	https://vulners.com/metasploit/MSF:ILITIES/LINUXRPM-RHSA-2013-1207/	*EXPLOIT*
+|     	SSV:60788	5.1	https://vulners.com/seebug/SSV:60788	*EXPLOIT*
+|     	CVE-2013-1862	5.1	https://vulners.com/cve/CVE-2013-1862
+|     	SSV:96537	5.0	https://vulners.com/seebug/SSV:96537	*EXPLOIT*
+|     	SSV:62058	5.0	https://vulners.com/seebug/SSV:62058	*EXPLOIT*
+|     	SSV:61874	5.0	https://vulners.com/seebug/SSV:61874	*EXPLOIT*
+|     	MSF:ILITIES/SUSE-CVE-2014-0231/	5.0	https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2014-0231/	*EXPLOIT*
+|     	MSF:AUXILIARY/SCANNER/HTTP/APACHE_OPTIONSBLEED	5.0	https://vulners.com/metasploit/MSF:AUXILIARY/SCANNER/HTTP/APACHE_OPTIONSBLEED	*EXPLOIT*
+|     	EXPLOITPACK:C8C256BE0BFF5FE1C0405CB0AA9C075D	5.0	https://vulners.com/exploitpack/EXPLOITPACK:C8C256BE0BFF5FE1C0405CB0AA9C075D	*EXPLOIT*
+|     	EDB-ID:42745	5.0	https://vulners.com/exploitdb/EDB-ID:42745	*EXPLOIT*
+|     	CVE-2017-9798	5.0	https://vulners.com/cve/CVE-2017-9798
+|     	CVE-2014-0231	5.0	https://vulners.com/cve/CVE-2014-0231
+|     	CVE-2014-0098	5.0	https://vulners.com/cve/CVE-2014-0098
+|     	CVE-2013-6438	5.0	https://vulners.com/cve/CVE-2013-6438
+|     	CVE-2013-5704	5.0	https://vulners.com/cve/CVE-2013-5704
+|     	1337DAY-ID-28573	5.0	https://vulners.com/zdt/1337DAY-ID-28573	*EXPLOIT*
+|     	SSV:60905	4.3	https://vulners.com/seebug/SSV:60905	*EXPLOIT*
+|     	SSV:60657	4.3	https://vulners.com/seebug/SSV:60657	*EXPLOIT*
+|     	SSV:60653	4.3	https://vulners.com/seebug/SSV:60653	*EXPLOIT*
+|     	SSV:60345	4.3	https://vulners.com/seebug/SSV:60345	*EXPLOIT*
+|     	MSF:ILITIES/SUSE-CVE-2012-4558/	4.3	https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2012-4558/	*EXPLOIT*
+|     	MSF:ILITIES/SUSE-CVE-2012-3499/	4.3	https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2012-3499/	*EXPLOIT*
+|     	MSF:ILITIES/ORACLE-SOLARIS-CVE-2012-4558/	4.3	https://vulners.com/metasploit/MSF:ILITIES/ORACLE-SOLARIS-CVE-2012-4558/	*EXPLOIT*
+|     	MSF:ILITIES/IBM-HTTP_SERVER-CVE-2012-3499/	4.3	https://vulners.com/metasploit/MSF:ILITIES/IBM-HTTP_SERVER-CVE-2012-3499/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2016-4975/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2016-4975/	*EXPLOIT*
+|     	MSF:ILITIES/HPUX-CVE-2012-4558/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HPUX-CVE-2012-4558/	*EXPLOIT*
+|     	MSF:ILITIES/CENTOS_LINUX-CVE-2012-4558/	4.3	https://vulners.com/metasploit/MSF:ILITIES/CENTOS_LINUX-CVE-2012-4558/	*EXPLOIT*
+|     	MSF:ILITIES/CENTOS_LINUX-CVE-2012-3499/	4.3	https://vulners.com/metasploit/MSF:ILITIES/CENTOS_LINUX-CVE-2012-3499/	*EXPLOIT*
+|     	MSF:ILITIES/APACHE-HTTPD-CVE-2012-4558/	4.3	https://vulners.com/metasploit/MSF:ILITIES/APACHE-HTTPD-CVE-2012-4558/	*EXPLOIT*
+|     	MSF:ILITIES/APACHE-HTTPD-CVE-2012-3499/	4.3	https://vulners.com/metasploit/MSF:ILITIES/APACHE-HTTPD-CVE-2012-3499/	*EXPLOIT*
+|     	CVE-2016-4975	4.3	https://vulners.com/cve/CVE-2016-4975
+|     	CVE-2013-1896	4.3	https://vulners.com/cve/CVE-2013-1896
+|     	CVE-2012-4558	4.3	https://vulners.com/cve/CVE-2012-4558
+|     	CVE-2012-3499	4.3	https://vulners.com/cve/CVE-2012-3499
+|_    	CVE-2012-2687	2.6	https://vulners.com/cve/CVE-2012-2687
+|_http-slowloris: false
+| http-vhosts: 
+|_128 names had status 200
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-feed: Couldn't find any feeds.
+|_http-title: Hack me if you can
+143/tcp open  imap     Dovecot imapd
+| ssl-cert: Subject: commonName=localhost/organizationName=Dovecot mail server
+| Not valid before: 2015-10-08T20:57:30
+|_Not valid after:  2025-10-07T20:57:30
+| imap-brute: 
+|   Accounts: No valid accounts found
+|_  Statistics: Performed 6302 guesses in 1926 seconds, average tps: 10.7
+| ssl-poodle: 
+|   VULNERABLE:
+|   SSL POODLE information leak
+|     State: LIKELY VULNERABLE
+|     IDs:  BID:70574  CVE:CVE-2014-3566
+|           The SSL protocol 3.0, as used in OpenSSL through 1.0.1i and other
+|           products, uses nondeterministic CBC padding, which makes it easier
+|           for man-in-the-middle attackers to obtain cleartext data via a
+|           padding-oracle attack, aka the "POODLE" issue.
+|     Disclosure date: 2014-10-14
+|     Check results:
+|       TLS_RSA_WITH_AES_128_CBC_SHA
+|       TLS_FALLBACK_SCSV properly implemented
+|     References:
+|       https://www.imperialviolet.org/2014/10/14/poodle.html
+|       https://www.securityfocus.com/bid/70574
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566
+|_      https://www.openssl.org/~bodo/ssl-poodle.pdf
+|_ssl-date: 2022-06-17T04:01:12+00:00; 0s from scanner time.
+|_imap-capabilities: LOGIN-REFERRALS more ENABLE SASL-IR have ID IDLE post-login listed Pre-login IMAP4rev1 capabilities STARTTLS LOGINDISABLEDA0001 LITERAL+ OK
+| ssl-enum-ciphers: 
+|   SSLv3: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - F
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - F
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       CBC-mode cipher in SSLv3 (CVE-2014-3566)
+|       Ciphersuite uses MD5 for message integrity
+|       Insecure certificate signature (SHA1), score capped at F
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - F
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - F
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|       Insecure certificate signature (SHA1), score capped at F
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - F
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - F
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|       Insecure certificate signature (SHA1), score capped at F
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 1024) - F
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 1024) - F
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 1024) - F
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 1024) - F
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - F
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - F
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - F
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - F
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - F
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - F
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|       Insecure certificate signature (SHA1), score capped at F
+|_  least strength: F
+| ssl-dh-params: 
+|   VULNERABLE:
+|   Diffie-Hellman Key Exchange Insufficient Group Strength
+|     State: VULNERABLE
+|       Transport Layer Security (TLS) services that use Diffie-Hellman groups
+|       of insufficient strength, especially those using one of a few commonly
+|       shared groups, may be susceptible to passive eavesdropping attacks.
+|     Check results:
+|       WEAK DH GROUP 1
+|             Cipher Suite: TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA
+|             Modulus Type: Safe prime
+|             Modulus Source: Unknown/Custom-generated
+|             Modulus Length: 1024
+|             Generator Length: 8
+|             Public Key Length: 1024
+|     References:
+|_      https://weakdh.org
+|_banner: * OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ...
+443/tcp open  ssl/http Apache httpd 2.2.22
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=10.19.1.251
+|   Found the following error pages: 
+|   
+|   Error Code: 404
+|_  	https://10.19.1.251:443/
+|_http-config-backup: ERROR: Script execution failed (use -d to debug)
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-feed: Couldn't find any feeds.
+|_citrix-brute-xml: FAILED: No domain specified (use ntdomain argument)
+| ssl-cert: Subject: commonName=BornToSec
+| Not valid before: 2015-10-08T00:19:46
+|_Not valid after:  2025-10-05T00:19:46
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+| http-cookie-flags: 
+|   /forum/: 
+|     PHPSESSID: 
+|_      httponly flag not set
+|_http-chrono: Request times for /; avg: 92.93ms; min: 47.98ms; max: 137.86ms
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-mobileversion-checker: No mobile version detected.
+| http-sitemap-generator: 
+|   Directory structure:
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+| http-useragent-tester: 
+|   Status for browser useragent: 404
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-security-headers: 
+|   Strict_Transport_Security: 
+|_    HSTS not configured in HTTPS Server
+| http-vhosts: 
+| 127 names had status 404
+|_erp
+|_http-xssed: No previously reported XSS vuln.
+| ssl-poodle: 
+|   VULNERABLE:
+|   SSL POODLE information leak
+|     State: LIKELY VULNERABLE
+|     IDs:  BID:70574  CVE:CVE-2014-3566
+|           The SSL protocol 3.0, as used in OpenSSL through 1.0.1i and other
+|           products, uses nondeterministic CBC padding, which makes it easier
+|           for man-in-the-middle attackers to obtain cleartext data via a
+|           padding-oracle attack, aka the "POODLE" issue.
+|     Disclosure date: 2014-10-14
+|     Check results:
+|       TLS_RSA_WITH_AES_128_CBC_SHA
+|       TLS_FALLBACK_SCSV properly implemented
+|     References:
+|       https://www.imperialviolet.org/2014/10/14/poodle.html
+|       https://www.securityfocus.com/bid/70574
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566
+|_      https://www.openssl.org/~bodo/ssl-poodle.pdf
+| http-headers: 
+|   Date: Fri, 17 Jun 2022 04:01:07 GMT
+|   Server: Apache/2.2.22 (Ubuntu)
+|   Vary: Accept-Encoding
+|   Content-Length: 276
+|   Connection: close
+|   Content-Type: text/html; charset=iso-8859-1
+|   
+|_  (Request type: GET)
+| http-enum: 
+|   /forum/: Forum
+|   /phpmyadmin/: phpMyAdmin
+|   /webmail/src/login.php: squirrelmail version 1.4.22
+|_  /webmail/images/sm_logo.png: SquirrelMail
+|_http-date: Fri, 17 Jun 2022 03:28:57 GMT; 0s from local time.
+|_http-slowloris: false
+|_http-server-header: Apache/2.2.22 (Ubuntu)
+|_http-fetch: Please enter the complete path of the directory to save data in.
+|_ssl-date: 2022-06-17T04:01:12+00:00; 0s from scanner time.
+| vulners: 
+|   cpe:/a:apache:http_server:2.2.22: 
+|     	SSV:60913	7.5	https://vulners.com/seebug/SSV:60913	*EXPLOIT*
+|     	CVE-2017-7679	7.5	https://vulners.com/cve/CVE-2017-7679
+|     	CVE-2017-3169	7.5	https://vulners.com/cve/CVE-2017-3169
+|     	CVE-2017-3167	7.5	https://vulners.com/cve/CVE-2017-3167
+|     	CVE-2013-2249	7.5	https://vulners.com/cve/CVE-2013-2249
+|     	MSF:ILITIES/UBUNTU-CVE-2018-1312/	6.8	https://vulners.com/metasploit/MSF:ILITIES/UBUNTU-CVE-2018-1312/	*EXPLOIT*
+|     	MSF:ILITIES/LINUXRPM-RHSA-2013-1012/	6.8	https://vulners.com/metasploit/MSF:ILITIES/LINUXRPM-RHSA-2013-1012/	*EXPLOIT*
+|     	MSF:ILITIES/LINUXRPM-RHSA-2013-1011/	6.8	https://vulners.com/metasploit/MSF:ILITIES/LINUXRPM-RHSA-2013-1011/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2018-1312/	6.8	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2018-1312/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2018-1312/	6.8	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2018-1312/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP1-CVE-2018-1312/	6.8	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP1-CVE-2018-1312/	*EXPLOIT*
+|     	MSF:ILITIES/CENTOS_LINUX-CVE-2017-17790/	6.8	https://vulners.com/metasploit/MSF:ILITIES/CENTOS_LINUX-CVE-2017-17790/	*EXPLOIT*
+|     	MSF:ILITIES/ALPINE-LINUX-CVE-2018-1312/	6.8	https://vulners.com/metasploit/MSF:ILITIES/ALPINE-LINUX-CVE-2018-1312/	*EXPLOIT*
+|     	CVE-2018-1312	6.8	https://vulners.com/cve/CVE-2018-1312
+|     	CVE-2017-9788	6.4	https://vulners.com/cve/CVE-2017-9788
+|     	MSF:ILITIES/LINUXRPM-RHSA-2013-1208/	5.4	https://vulners.com/metasploit/MSF:ILITIES/LINUXRPM-RHSA-2013-1208/	*EXPLOIT*
+|     	MSF:ILITIES/LINUXRPM-RHSA-2013-1207/	5.4	https://vulners.com/metasploit/MSF:ILITIES/LINUXRPM-RHSA-2013-1207/	*EXPLOIT*
+|     	SSV:60788	5.1	https://vulners.com/seebug/SSV:60788	*EXPLOIT*
+|     	CVE-2013-1862	5.1	https://vulners.com/cve/CVE-2013-1862
+|     	SSV:96537	5.0	https://vulners.com/seebug/SSV:96537	*EXPLOIT*
+|     	SSV:62058	5.0	https://vulners.com/seebug/SSV:62058	*EXPLOIT*
+|     	SSV:61874	5.0	https://vulners.com/seebug/SSV:61874	*EXPLOIT*
+|     	MSF:ILITIES/SUSE-CVE-2014-0231/	5.0	https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2014-0231/	*EXPLOIT*
+|     	MSF:AUXILIARY/SCANNER/HTTP/APACHE_OPTIONSBLEED	5.0	https://vulners.com/metasploit/MSF:AUXILIARY/SCANNER/HTTP/APACHE_OPTIONSBLEED	*EXPLOIT*
+|     	EXPLOITPACK:C8C256BE0BFF5FE1C0405CB0AA9C075D	5.0	https://vulners.com/exploitpack/EXPLOITPACK:C8C256BE0BFF5FE1C0405CB0AA9C075D	*EXPLOIT*
+|     	EDB-ID:42745	5.0	https://vulners.com/exploitdb/EDB-ID:42745	*EXPLOIT*
+|     	CVE-2017-9798	5.0	https://vulners.com/cve/CVE-2017-9798
+|     	CVE-2014-0231	5.0	https://vulners.com/cve/CVE-2014-0231
+|     	CVE-2014-0098	5.0	https://vulners.com/cve/CVE-2014-0098
+|     	CVE-2013-6438	5.0	https://vulners.com/cve/CVE-2013-6438
+|     	CVE-2013-5704	5.0	https://vulners.com/cve/CVE-2013-5704
+|     	1337DAY-ID-28573	5.0	https://vulners.com/zdt/1337DAY-ID-28573	*EXPLOIT*
+|     	SSV:60905	4.3	https://vulners.com/seebug/SSV:60905	*EXPLOIT*
+|     	SSV:60657	4.3	https://vulners.com/seebug/SSV:60657	*EXPLOIT*
+|     	SSV:60653	4.3	https://vulners.com/seebug/SSV:60653	*EXPLOIT*
+|     	SSV:60345	4.3	https://vulners.com/seebug/SSV:60345	*EXPLOIT*
+|     	MSF:ILITIES/SUSE-CVE-2012-4558/	4.3	https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2012-4558/	*EXPLOIT*
+|     	MSF:ILITIES/SUSE-CVE-2012-3499/	4.3	https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2012-3499/	*EXPLOIT*
+|     	MSF:ILITIES/ORACLE-SOLARIS-CVE-2012-4558/	4.3	https://vulners.com/metasploit/MSF:ILITIES/ORACLE-SOLARIS-CVE-2012-4558/	*EXPLOIT*
+|     	MSF:ILITIES/IBM-HTTP_SERVER-CVE-2012-3499/	4.3	https://vulners.com/metasploit/MSF:ILITIES/IBM-HTTP_SERVER-CVE-2012-3499/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2016-4975/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2016-4975/	*EXPLOIT*
+|     	MSF:ILITIES/HPUX-CVE-2012-4558/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HPUX-CVE-2012-4558/	*EXPLOIT*
+|     	MSF:ILITIES/CENTOS_LINUX-CVE-2012-4558/	4.3	https://vulners.com/metasploit/MSF:ILITIES/CENTOS_LINUX-CVE-2012-4558/	*EXPLOIT*
+|     	MSF:ILITIES/CENTOS_LINUX-CVE-2012-3499/	4.3	https://vulners.com/metasploit/MSF:ILITIES/CENTOS_LINUX-CVE-2012-3499/	*EXPLOIT*
+|     	MSF:ILITIES/APACHE-HTTPD-CVE-2012-4558/	4.3	https://vulners.com/metasploit/MSF:ILITIES/APACHE-HTTPD-CVE-2012-4558/	*EXPLOIT*
+|     	MSF:ILITIES/APACHE-HTTPD-CVE-2012-3499/	4.3	https://vulners.com/metasploit/MSF:ILITIES/APACHE-HTTPD-CVE-2012-3499/	*EXPLOIT*
+|     	CVE-2016-4975	4.3	https://vulners.com/cve/CVE-2016-4975
+|     	CVE-2013-1896	4.3	https://vulners.com/cve/CVE-2013-1896
+|     	CVE-2012-4558	4.3	https://vulners.com/cve/CVE-2012-4558
+|     	CVE-2012-3499	4.3	https://vulners.com/cve/CVE-2012-3499
+|_    	CVE-2012-2687	2.6	https://vulners.com/cve/CVE-2012-2687
+| ssl-enum-ciphers: 
+|   SSLv3: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - F
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - F
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - F
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - F
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - F
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 2048) - F
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - F
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - F
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - F
+|       TLS_ECDHE_RSA_WITH_RC4_128_SHA (secp256r1) - F
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - F
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       CBC-mode cipher in SSLv3 (CVE-2014-3566)
+|       Insecure certificate signature (SHA1), score capped at F
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - F
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - F
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - F
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - F
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - F
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 2048) - F
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - F
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - F
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - F
+|       TLS_ECDHE_RSA_WITH_RC4_128_SHA (secp256r1) - F
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - F
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Insecure certificate signature (SHA1), score capped at F
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - F
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - F
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - F
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - F
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - F
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 2048) - F
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - F
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - F
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - F
+|       TLS_ECDHE_RSA_WITH_RC4_128_SHA (secp256r1) - F
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - F
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Insecure certificate signature (SHA1), score capped at F
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 2048) - F
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 2048) - F
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 2048) - F
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 2048) - F
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 2048) - F
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 2048) - F
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 2048) - F
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 2048) - F
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 2048) - F
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 2048) - F
+|       TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - F
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - F
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - F
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - F
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - F
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - F
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - F
+|       TLS_ECDHE_RSA_WITH_RC4_128_SHA (secp256r1) - F
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - F
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - F
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - F
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - F
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - F
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Insecure certificate signature (SHA1), score capped at F
+|_  least strength: F
+|_http-comments-displayer: Couldn't find any comments.
+|_http-title: 404 Not Found
+| http-brute:   
+|_  Path "/" does not require authentication
+993/tcp open  ssl/imap Dovecot imapd
+| ssl-cert: Subject: commonName=localhost/organizationName=Dovecot mail server
+| Not valid before: 2015-10-08T20:57:30
+|_Not valid after:  2025-10-07T20:57:30
+| ssl-dh-params: 
+|   VULNERABLE:
+|   Diffie-Hellman Key Exchange Insufficient Group Strength
+|     State: VULNERABLE
+|       Transport Layer Security (TLS) services that use Diffie-Hellman groups
+|       of insufficient strength, especially those using one of a few commonly
+|       shared groups, may be susceptible to passive eavesdropping attacks.
+|     Check results:
+|       WEAK DH GROUP 1
+|             Cipher Suite: TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA
+|             Modulus Type: Safe prime
+|             Modulus Source: Unknown/Custom-generated
+|             Modulus Length: 1024
+|             Generator Length: 8
+|             Public Key Length: 1024
+|     References:
+|_      https://weakdh.org
+| ssl-poodle: 
+|   VULNERABLE:
+|   SSL POODLE information leak
+|     State: LIKELY VULNERABLE
+|     IDs:  BID:70574  CVE:CVE-2014-3566
+|           The SSL protocol 3.0, as used in OpenSSL through 1.0.1i and other
+|           products, uses nondeterministic CBC padding, which makes it easier
+|           for man-in-the-middle attackers to obtain cleartext data via a
+|           padding-oracle attack, aka the "POODLE" issue.
+|     Disclosure date: 2014-10-14
+|     Check results:
+|       TLS_RSA_WITH_AES_128_CBC_SHA
+|       TLS_FALLBACK_SCSV properly implemented
+|     References:
+|       https://www.imperialviolet.org/2014/10/14/poodle.html
+|       https://www.securityfocus.com/bid/70574
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566
+|_      https://www.openssl.org/~bodo/ssl-poodle.pdf
+|_banner: * OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ...
+| imap-brute: 
+|   Accounts: No valid accounts found
+|   Statistics: Performed 0 guesses in 1 seconds, average tps: 0.0
+|_  ERROR: The service seems to have failed or is heavily firewalled...
+|_imap-capabilities: LOGIN-REFERRALS ENABLE SASL-IR more ID IDLE have post-login AUTH=PLAINA0001 IMAP4rev1 listed capabilities OK LITERAL+ Pre-login
+| ssl-enum-ciphers: 
+|   SSLv3: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - F
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - F
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       CBC-mode cipher in SSLv3 (CVE-2014-3566)
+|       Ciphersuite uses MD5 for message integrity
+|       Insecure certificate signature (SHA1), score capped at F
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - F
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - F
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|       Insecure certificate signature (SHA1), score capped at F
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - F
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - F
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|       Insecure certificate signature (SHA1), score capped at F
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 1024) - F
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 1024) - F
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 1024) - F
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 1024) - F
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - F
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - F
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - F
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - F
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - F
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - F
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 2048) - F
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|       Insecure certificate signature (SHA1), score capped at F
+|_  least strength: F
+|_unusual-port: imap unexpected on port tcp/993
+|_ssl-date: 2022-06-17T04:01:12+00:00; 0s from scanner time.
+MAC Address: 08:00:27:C7:50:11 (Oracle VirtualBox virtual NIC)
+Device type: general purpose
+Running: Linux 3.X
+OS CPE: cpe:/o:linux:linux_kernel:3
+OS details: Linux 3.2 - 3.16
+Network Distance: 1 hop
+Service Info: Host: 127.0.1.1; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+| qscan: 
+| PORT  FAMILY  MEAN (us)  STDDEV  LOSS (%)
+| 1     0       517.30     219.68  0.0%
+| 21    0       701.20     384.65  0.0%
+| 22    1       805.30     429.41  0.0%
+| 80    1       977.30     406.57  0.0%
+| 143   1       950.50     338.21  0.0%
+| 443   1       833.00     360.26  0.0%
+|_993   0       594.30     357.20  0.0%
+|_fcrdns: FAIL (No PTR record)
+| dns-blacklist: 
+|   SPAM
+|     bl.spamcop.net - FAIL
+|     l2.apews.org - FAIL
+|     list.quorum.to - FAIL
+|_    bl.nszones.com - FAIL
+| port-states: 
+|   tcp: 
+|     open: 21-22,80,143,443,993
+|_    closed: 1-20,23-79,81-142,144-442,444-992,994-65535
+|_dns-brute: Can't guess domain of "10.19.1.251"; use dns-brute.domain script argument.
+|_ipidseq: ERROR: Script execution failed (use -d to debug)
+|_path-mtu: PMTU == 1500
+| traceroute-geolocation: 
+|   HOP  RTT   ADDRESS      GEOLOCATION
+|_  1    0.47  10.19.1.251  - ,- 
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.47 ms 10.19.1.251
+
+Post-scan script results:
+| reverse-index: 
+|   21/tcp: 10.19.1.251
+|   22/tcp: 10.19.1.251
+|   80/tcp: 10.19.1.251
+|   143/tcp: 10.19.1.251
+|   443/tcp: 10.19.1.251
+|_  993/tcp: 10.19.1.251
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Jun 17 06:01:30 2022 -- 1 IP address (1 host up) scanned in 3936.40 seconds
