@@ -1,23 +1,52 @@
+# Boot2Root
+
+# Setup
+
 Create a new VM from the ISO
 
 Connect this VM as bridge adapter to be on same network as your host:
 
+
 Find target's address:
     nmap -sn -PE -v IP_HOST/24
 
-List ports on the target:
+# Enumeration
+
+## Port listing
+List ports on the target with nmap
+
     nmap -sA -O -sV -vv -oN nmap.dump IP_TARGET/24
 
+# Website
+## Detect files and directories with gobuster
 
-Install gobuster
+### Install gobuster
+
     brew install gobuster
 
-gobuster dir -u http://IP_TARGET/ -w WORDLIST_PATH
+TODO find an installation way that works at school
+
+### Run
+    gobuster dir -u http://IP_TARGET/ -w WORDLIST_PATH
 
 find /forum
 on https
 
-Interesting post: a dump of the target's connections log .
+## Detect files and directories with nikto
+
+Download/install Nikto
+    
+    brew install nikto
+
+## On the forum
+
+This forum is powered by `My little forum`
+
+We find several posts and one of them is very interesting:
+ a dump of the target's connections log .
+ See this >>> file <<<
+TODO make a script that download the file and make a link here
+
 
 users in log:
 lmezard
@@ -32,9 +61,7 @@ wandre
 thor
 zaz
 
-this forum is powered by `My little forum`
 
-My little forum
 
 On the tab `login` we can try to connect as `lmezard` with the password `!q\]Ej?*5K5cy*AJ`.
 
