@@ -1,6 +1,6 @@
 # Boot2Root
 
-By Nlecaill
+By Nlecaill & Lrobino
 
 ---------- 
 
